@@ -334,8 +334,6 @@ function App() {
     setMobileMenuOpen(false)
   }
 
-  const toggleMobileMenu = () => setMobileMenuOpen((open) => !open)
-
   const featuredProperties = useMemo(
     () => properties.filter((property) => featuredFilter === 'All' || property.category === featuredFilter),
     [featuredFilter],
