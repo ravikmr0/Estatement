@@ -126,7 +126,7 @@ const Properties = ({ onNavigate }: PropertiesProps) => {
               </article>
             ))
           ) : (
-            <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '3rem' }}>
+            <div className="no-results">
               <p>No properties found matching your criteria. Please adjust your filters.</p>
             </div>
           )}

@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
@@ -77,7 +77,7 @@ function App() {
 
     // Fallback for unknown routes
     return (
-      <div style={{ padding: '4rem 2rem', textAlign: 'center' }}>
+      <div className="not-found">
         <h1>Page Not Found</h1>
         <p>The page you're looking for doesn't exist.</p>
       </div>

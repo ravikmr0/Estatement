@@ -60,11 +60,11 @@ export const PropertyFeaturesSlider = ({
       </div>
 
       {properties.length > itemsPerView && (
-        <div className="slider-controls" style={{ marginTop: '2rem', textAlign: 'center' }}>
-          <button onClick={handlePrevious} aria-label="Previous properties" style={{ marginRight: '1rem' }}>
+        <div className="slider-controls">
+          <button className="slider-button" onClick={handlePrevious} aria-label="Previous properties">
             ← Previous
           </button>
-          <button onClick={handleNext} aria-label="Next properties">
+          <button className="slider-button" onClick={handleNext} aria-label="Next properties">
             Next →
           </button>
         </div>

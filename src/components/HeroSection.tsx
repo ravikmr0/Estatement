@@ -66,19 +66,21 @@ export const HeroSection = ({ slides, eyebrow, title, description, image, showSl
         </div>
       )}
       <div className="hero-panel">
-        <span className="hero-eyebrow">{displayEyebrow}</span>
-        <div className="hero-accent-line" />
-        <h1 className="hero-title">{displayTitle}</h1>
-        <p className="hero-copy">
-          {displayText && (
-            <>
-              {displayText}
-              <br />
-              <br />
-            </>
-          )}
-          {displayDescription}
-        </p>
+        <div className="hero-panel-inner">
+          <span className="hero-eyebrow">{displayEyebrow}</span>
+          <div className="hero-accent-line" />
+          <h1 className="hero-title">{displayTitle}</h1>
+          <p className="hero-copy">
+            {displayText && (
+              <>
+                {displayText}
+                <br />
+                <br />
+              </>
+            )}
+            {displayDescription}
+          </p>
+        </div>
       </div>
       {!showSlider && (
         <div className="scroll-indicator" aria-hidden="true">
