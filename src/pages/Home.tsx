@@ -12,10 +12,8 @@ import {
   Handshake,
   Sparkles,
 } from "lucide-react";
+import HeroSlider from "./HeroSlider";
 import "./pages.css";
-
-const heroImg =
-  "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600";
 
 const features = [
   {
@@ -71,32 +69,7 @@ const properties = [
 export default function Home() {
   return (
     <>
-      <section className="home-hero">
-        <img className="home-hero-image" src={heroImg} alt="" />
-        <div className="container home-hero-content">
-          <span className="page-hero-eyebrow fade-up">
-            <span className="dot" />
-            Estate & Investment Advisory
-          </span>
-          <h1 className="fade-up fade-up-delay-1">
-            Property decisions, <span className="accent">made confident.</span>
-          </h1>
-          <p className="fade-up fade-up-delay-2">
-            We combine curated real estate opportunities with rigorous
-            investment advisory — so you buy, hold, and sell with clarity and
-            conviction.
-          </p>
-          <div className="home-hero-actions fade-up fade-up-delay-3">
-            <Link to="/properties" className="btn btn-gold btn-lg">
-              Explore Properties
-              <ArrowRight />
-            </Link>
-            <Link to="/advisory" className="btn btn-outline btn-lg" style={{ color: "var(--surface)", borderColor: "rgba(255,255,255,0.3)" }}>
-              Advisory Services
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HeroSlider />
 
       <section className="section">
         <div className="container">
