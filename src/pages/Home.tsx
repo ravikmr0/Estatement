@@ -95,20 +95,6 @@ export default function Home() {
               Advisory Services
             </Link>
           </div>
-          <div className="home-hero-stats fade-up fade-up-delay-3">
-            <div>
-              <div className="hero-stat-num">£2.4B+</div>
-              <div className="hero-stat-label">Assets Advised</div>
-            </div>
-            <div>
-              <div className="hero-stat-num">850+</div>
-              <div className="hero-stat-label">Clients Served</div>
-            </div>
-            <div>
-              <div className="hero-stat-num">18 yrs</div>
-              <div className="hero-stat-label">Market Experience</div>
-            </div>
-          </div>
         </div>
       </section>
 
