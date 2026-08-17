@@ -8,7 +8,6 @@ import {
   Users,
   Menu,
   X,
-  ChevronRight,
   Facebook,
   Linkedin,
   Instagram,
@@ -71,11 +70,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             ))}
           </nav>
 
-          <Link to="/contact" className="header-cta">
-            Book a Consultation
-            <ChevronRight />
-          </Link>
-
           <button
             className="mobile-toggle"
             onClick={() => setMenuOpen(true)}
@@ -113,9 +107,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 {item.label}
               </NavLink>
             ))}
-            <Link to="/contact" className="btn btn-primary" style={{ marginTop: 16 }}>
-              Book a Consultation
-            </Link>
           </div>
         </>
       )}
