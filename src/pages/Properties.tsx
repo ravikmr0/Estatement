@@ -1,152 +1,220 @@
-import { useState, useMemo } from 'react'
-import { HeroSection } from '../components/HeroSection'
-import {
-  properties,
-  propertyTypes,
-  locationOptions,
-  budgetOptions,
-  configOptions,
-} from '../data/constants'
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight, MapPin, BedDouble, Maximize, Bath } from "lucide-react";
+import "./pages.css";
 
-interface PropertiesProps {
-  onNavigate: (href: string) => void
-}
+const heroImg =
+  "https://images.pexels.com/photos/8082328/pexels-photo-8082328.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600";
 
-const Properties = ({ onNavigate }: PropertiesProps) => {
-  const [propertyType, setPropertyType] = useState('All')
-  const [propertyLocation, setPropertyLocation] = useState('All')
-  const [propertyBudget, setPropertyBudget] = useState('All')
-  const [propertyConfig, setPropertyConfig] = useState('All')
+type Property = {
+  img: string;
+  tag: string;
+  title: string;
+  location: string;
+  beds: number;
+  baths: number;
+  area: string;
+  price: string;
+  category: "Residential" | "Investment" | "Commercial";
+};
 
-  const filteredProperties = useMemo(() => {
-    return properties.filter((property) => {
-      const typeMatch = propertyType === 'All' || property.category === propertyType || propertyType === 'Investment'
-      const locationMatch = propertyLocation === 'All' || property.location.includes(propertyLocation)
-      const budgetMatch = propertyBudget === 'All' || property.budget === propertyBudget
-      const configMatch =
-        propertyConfig === 'All' ||
-        property.config.includes(propertyConfig) ||
-        (propertyConfig === 'Premium Plot' && property.category === 'Plots')
-      return typeMatch && locationMatch && budgetMatch && configMatch
-    })
-  }, [propertyType, propertyLocation, propertyBudget, propertyConfig])
+const allProperties: Property[] = [
+  {
+    img: "https://images.pexels.com/photos/8134821/pexels-photo-8134821.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    tag: "For Sale",
+    title: "The Hillcrest Residence",
+    location: "Palo Alto, CA",
+    beds: 4,
+    baths: 3,
+    area: "3,200 sqft",
+    price: "$2.85M",
+    category: "Residential",
+  },
+  {
+    img: "https://images.pexels.com/photos/16110999/pexels-photo-16110999.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    tag: "Investment",
+    title: "Marina Bay Lofts",
+    location: "San Francisco, CA",
+    beds: 2,
+    baths: 2,
+    area: "1,480 sqft",
+    price: "$1.42M",
+    category: "Investment",
+  },
+  {
+    img: "https://images.pexels.com/photos/7031604/pexels-photo-7031604.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    tag: "New Listing",
+    title: "Oakwood Modern Villa",
+    location: "Menlo Park, CA",
+    beds: 5,
+    baths: 4,
+    area: "4,100 sqft",
+    price: "$3.95M",
+    category: "Residential",
+  },
+  {
+    img: "https://images.pexels.com/photos/31737859/pexels-photo-31737859.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    tag: "Premium",
+    title: "Lumière Estate",
+    location: "Atherton, CA",
+    beds: 6,
+    baths: 5,
+    area: "5,800 sqft",
+    price: "$6.20M",
+    category: "Residential",
+  },
+  {
+    img: "https://images.pexels.com/photos/4424414/pexels-photo-4424414.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    tag: "Investment",
+    title: "Harbour View Towers",
+    location: "Oakland, CA",
+    beds: 0,
+    baths: 0,
+    area: "12 units",
+    price: "$8.50M",
+    category: "Commercial",
+  },
+  {
+    img: "https://images.pexels.com/photos/7031406/pexels-photo-7031406.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    tag: "For Sale",
+    title: "Cedar Brook Cottage",
+    location: "Los Altos, CA",
+    beds: 3,
+    baths: 2,
+    area: "2,100 sqft",
+    price: "$1.95M",
+    category: "Residential",
+  },
+  {
+    img: "https://images.pexels.com/photos/27451770/pexels-photo-27451770.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    tag: "Investment",
+    title: "The Greenwich Apartments",
+    location: "San Jose, CA",
+    beds: 1,
+    baths: 1,
+    area: "8 units",
+    price: "$3.75M",
+    category: "Investment",
+  },
+  {
+    img: "https://images.pexels.com/photos/19263207/pexels-photo-19263207.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    tag: "Commercial",
+    title: "Atrium Office Plaza",
+    location: "Fremont, CA",
+    beds: 0,
+    baths: 0,
+    area: "18,000 sqft",
+    price: "$5.40M",
+    category: "Commercial",
+  },
+  {
+    img: "https://images.pexels.com/photos/37692742/pexels-photo-37692742.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    tag: "Premium",
+    title: "Villa Toscana",
+    location: "Hillsborough, CA",
+    beds: 5,
+    baths: 4,
+    area: "4,600 sqft",
+    price: "$4.85M",
+    category: "Residential",
+  },
+];
 
-  const handleLinkClick = (href: string) => (event: React.MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault()
-    onNavigate(href)
-  }
+const filters = ["All", "Residential", "Investment", "Commercial"] as const;
+
+export default function Properties() {
+  const [active, setActive] = useState<(typeof filters)[number]>("All");
+
+  const shown =
+    active === "All"
+      ? allProperties
+      : allProperties.filter((p) => p.category === active);
 
   return (
     <>
-      <HeroSection
-        eyebrow="Our Portfolio"
-        title="Discover Premium Real Estate Opportunities"
-        description="Browse our carefully curated collection of residential, commercial and investment properties across Noida and the YEIDA growth corridor."
-        image="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80"
-        showSlider={false}
-      />
-
-      <section className="section section-filter reveal">
-        <div className="filter-panel">
-          <div className="filter-group">
-            <label>
-              Property Type
-              <select value={propertyType} onChange={(event) => setPropertyType(event.target.value)}>
-                {propertyTypes.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </div>
-          <div className="filter-group">
-            <label>
-              Location
-              <select value={propertyLocation} onChange={(event) => setPropertyLocation(event.target.value)}>
-                {locationOptions.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </div>
-          <div className="filter-group">
-            <label>
-              Budget
-              <select value={propertyBudget} onChange={(event) => setPropertyBudget(event.target.value)}>
-                {budgetOptions.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </div>
-          <div className="filter-group">
-            <label>
-              Configuration
-              <select value={propertyConfig} onChange={(event) => setPropertyConfig(event.target.value)}>
-                {configOptions.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </div>
+      <section className="page-hero">
+        <img className="page-hero-image" src={heroImg} alt="" />
+        <div className="container page-hero-content">
+          <span className="page-hero-eyebrow fade-up">
+            <span className="dot" />
+            Property Portfolio
+          </span>
+          <h1 className="page-hero-title fade-up fade-up-delay-1">
+            Curated properties, vetted for value
+          </h1>
+          <p className="page-hero-subtitle fade-up fade-up-delay-2">
+            Every listing in our portfolio has been analysed by our advisory
+            team for location quality, growth potential, and investment merit.
+          </p>
         </div>
       </section>
 
-      <section className="section section-property-list reveal">
-        <div className="property-list-grid">
-          {filteredProperties.length > 0 ? (
-            filteredProperties.map((property) => (
-              <article key={property.id} className="property-card property-card--list">
-                <div className="property-image" style={{ backgroundImage: `url('${property.image}')` }} />
-                <div className="property-body">
-                  <span className="property-tag">{property.category}</span>
-                  <h3>{property.title}</h3>
-                  <p className="property-location">{property.location}</p>
-                  <div className="property-meta">
-                    <span>{property.type}</span>
-                    <span>{property.config}</span>
-                  </div>
-                  <p className="property-price">{property.price}</p>
-                  <p className="property-description">{property.highlight}</p>
-                  <a
-                    className="property-cta"
-                    href={`/properties/${property.slug}`}
-                    onClick={handleLinkClick(`/properties/${property.slug}`)}
-                  >
-                    View Details
-                  </a>
+      <section className="section">
+        <div className="container">
+          <div className="filter-bar">
+            {filters.map((f) => (
+              <button
+                key={f}
+                className={`filter-chip ${active === f ? "active" : ""}`}
+                onClick={() => setActive(f)}
+              >
+                {f}
+              </button>
+            ))}
+          </div>
+
+          <div className="property-grid">
+            {shown.map((p) => (
+              <div key={p.title} className="property-card">
+                <div className="property-card-img">
+                  <img src={p.img} alt={p.title} />
+                  <span className="property-tag">{p.tag}</span>
                 </div>
-              </article>
-            ))
-          ) : (
-            <div className="no-results">
-              <p>No properties found matching your criteria. Please adjust your filters.</p>
-            </div>
+                <div className="property-card-body">
+                  <h3>{p.title}</h3>
+                  <div className="property-location">
+                    <MapPin />
+                    {p.location}
+                  </div>
+                  <div className="property-specs">
+                    {p.beds > 0 && (
+                      <span className="property-spec"><BedDouble /> {p.beds} Beds</span>
+                    )}
+                    {p.baths > 0 && (
+                      <span className="property-spec"><Bath /> {p.baths} Baths</span>
+                    )}
+                    <span className="property-spec"><Maximize /> {p.area}</span>
+                  </div>
+                  <div className="property-price">{p.price}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {shown.length === 0 && (
+            <p style={{ textAlign: "center", color: "var(--text-muted)", marginTop: 40 }}>
+              No properties in this category right now. Check back soon.
+            </p>
           )}
         </div>
       </section>
 
-      <section className="section centered-cta reveal">
-        <div className="cta-panel-inner">
-          <h2>Can't Find What You're Looking For?</h2>
-          <p>
-            Tell us what you are looking for and our advisors will help shortlist suitable opportunities that align with your
-            priorities.
-          </p>
-          <a href="/contact-us" onClick={handleLinkClick('/contact-us')} className="button button-primary">
-            Request a Consultation
-          </a>
+      <section className="cta-band">
+        <div className="container">
+          <div className="cta-band-inner">
+            <div className="cta-band-text">
+              <h2>Don't see the right fit?</h2>
+              <p>Our advisory team sources off-market opportunities tailored to your criteria.</p>
+            </div>
+            <div className="cta-band-actions">
+              <Link to="/contact" className="btn btn-gold btn-lg">
+                Request a Property
+                <ArrowRight />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>
-  )
+  );
 }
-
-export default Properties

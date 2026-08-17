@@ -1,28 +1,24 @@
 {
-  "name": "estatement",
+  "name": "estate-advisory",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "oxlint",
     "preview": "vite preview"
   },
-  "engines": {
-    "node": "18.x || 20.x || 22.x"
-  },
   "dependencies": {
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.0",
+    "lucide-react": "^0.439.0"
   },
   "devDependencies": {
-    "@types/node": "^24.13.3",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.0",
-    "oxlint": "^1.75.0",
-    "typescript": "~6.0.2",
-    "vite": "^6.3.5"
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.5.4",
+    "vite": "^6.0.0"
   }
 }
