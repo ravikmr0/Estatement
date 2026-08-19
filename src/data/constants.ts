@@ -137,7 +137,7 @@ export const configOptions = ['All', '2 BHK', '3 BHK', '4 BHK', 'Premium Plot']
 
 export const heroSlides = [
   {
-    image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80',
+    image: '/public/hero/balcony_view.jpg',
     eyebrow: 'ESTATEMENT REALTY',
     title: 'Focused on Noida.',
     supportingText: 'Premium residences and commercial opportunities across Noida.',
@@ -146,7 +146,7 @@ export const heroSlides = [
     location: 'Noida',
   },
   {
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80',
+    image: '/public/hero/yamuna_expressway.png',
     eyebrow: 'ESTATEMENT REALTY',
     title: 'Focused on Noida Expressway.',
     supportingText: 'Residential and commercial opportunities along Noida Expressway.',
@@ -155,7 +155,7 @@ export const heroSlides = [
     location: 'Noida Expressway',
   },
   {
-    image: 'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=80',
+    image: '/public/hero/top_building.jpg',
     eyebrow: 'ESTATEMENT REALTY',
     title: 'Focused on Greater Noida.',
     supportingText: 'Residences, commercial spaces and emerging investment opportunities.',
@@ -164,7 +164,7 @@ export const heroSlides = [
     location: 'Greater Noida',
   },
   {
-    image: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1600&q=80',
+    image: '/public/hero/pool_view.jpg',
     eyebrow: 'ESTATEMENT REALTY',
     title: 'Focused on YEIDA.',
     supportingText: 'YEIDA Authority Plots and strategic real estate opportunities.',

@@ -38,8 +38,8 @@ export const Header = ({ scrolled, activePath, onNavigate }: HeaderProps) => {
   return (
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-inner">
-        <a href="/" onClick={handleLinkClick('/')} className="brand-mark" aria-label="Estatement Realty home">
-          <span className="brand-name">Estatement</span>
+        <a href="/" onClick={handleLinkClick('/')} className="brand-mark" aria-label="ESTATEMENT Realty home">
+          <span className="brand-name">ESTATEMENT</span>
           <span className="brand-tag">Realty</span>
         </a>
 

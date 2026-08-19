@@ -45,13 +45,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <header className={`header ${scrolled ? "scrolled" : ""}`}>
         <div className="container header-inner">
-          <Link to="/" className="brand" aria-label="Mira Estate Advisory home">
-            <span className="brand-mark">
-              <Building2 />
-            </span>
+          <Link to="/" className="brand" aria-label="ESTATEMENT home">
             <span className="brand-text">
-              <span className="brand-name">Mira Estate</span>
-              <span className="brand-tag">Advisory</span>
+              <span className="brand-name">ESTATEMENT</span>
+              <span className="brand-tag">Realty</span>
             </span>
           </Link>
 
@@ -118,12 +115,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="footer-top">
             <div className="footer-brand">
               <div className="brand">
-                <span className="brand-mark">
-                  <Building2 />
-                </span>
                 <span className="brand-text">
-                  <span className="brand-name">Mira Estate</span>
-                  <span className="brand-tag">Advisory</span>
+                  <span className="brand-name">ESTATEMENT</span>
+                  <span className="brand-tag">Realty</span>
                 </span>
               </div>
               <p className="footer-about">
@@ -132,9 +126,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 real estate opportunities.
               </p>
               <div className="footer-social">
-                <a href="#" aria-label="LinkedIn"><Linkedin /></a>
-                <a href="#" aria-label="Instagram"><Instagram /></a>
-                <a href="#" aria-label="Facebook"><Facebook /></a>
+                <a href="https://www.linkedin.com/company/estatement-realty/" aria-label="LinkedIn"><Linkedin /></a>
+                <a href="https://www.instagram.com/estatementofficial/" aria-label="Instagram"><Instagram /></a>
+                <a href="https://www.facebook.com/estatementgroup" aria-label="Facebook"><Facebook /></a>
                 <a href="#" aria-label="Twitter"><Twitter /></a>
               </div>
             </div>
@@ -162,16 +156,24 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div>
               <h4 className="footer-col-title">Contact</h4>
               <div className="footer-nav">
-                <a href="tel:+15551234567">+1 (555) 123-4567</a>
-                <a href="mailto:hello@miraestate.co">hello@miraestate.co</a>
-                <span>450 Market Street, Suite 1200</span>
-                <span>San Francisco, CA 94105</span>
+                <div>
+                  <strong>Phone</strong>
+                  <p>+91-8750080023</p>
+                </div>
+                <div>
+                  <strong>Email</strong>
+                  <p><a href="mailto:info@estatement.in">info@estatement.in</a> | <a href="mailto:ajay@estatement.in">ajay@estatement.in</a></p>
+                </div>
+                <div>
+                  <strong>Office</strong>
+                  <p>A-74A, SECTOR 136, Noida, Gautam Buddha Nagar, Uttar Pradesh, 201305 - India</p>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="footer-bottom">
-            <span>&copy; {new Date().getFullYear()} Mira Estate Advisory. All rights reserved.</span>
+            <span>&copy; {new Date().getFullYear()} ESTATEMENT. All rights reserved.</span>
             <span>Designed for confident property decisions.</span>
           </div>
         </div>

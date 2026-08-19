@@ -8,7 +8,7 @@ import {
 import "./pages.css";
 
 const storyImg =
-  "https://images.pexels.com/photos/1181738/pexels-photo-1181738.jpeg?auto=compress&cs=tinysrgb&h=750&w=1000";
+  "/public/about/estatement_building.png";
 
 const values = [
   {
@@ -31,24 +31,15 @@ const values = [
 const team = [
   {
     img: "https://images.pexels.com/photos/37148308/pexels-photo-37148308.jpeg?auto=compress&cs=tinysrgb&h=400&w=400",
-    name: "James Whitfield",
-    role: "Founder & Chief Advisor",
+    name: "Ajay Bhadana",
+    role: "Founder & Managing Director",
   },
   {
     img: "https://images.pexels.com/photos/31869537/pexels-photo-31869537.jpeg?auto=compress&cs=tinysrgb&h=400&w=400",
-    name: "Sofia Marchetti",
-    role: "Head of Investments",
+    name: "Amit Bhadana",
+    role: "Co-Founder & Chief Advisor",
   },
-  {
-    img: "https://images.pexels.com/photos/17049771/pexels-photo-17049771.jpeg?auto=compress&cs=tinysrgb&h=400&w=400",
-    name: "Daniel Okafor",
-    role: "Senior Property Advisor",
-  },
-  {
-    img: "https://images.pexels.com/photos/37605831/pexels-photo-37605831.jpeg?auto=compress&cs=tinysrgb&h=400&w=400",
-    name: "Marcus Chen",
-    role: "Market Analyst",
-  },
+ 
 ];
 
 export default function About() {
@@ -59,7 +50,7 @@ export default function About() {
         <div className="container page-hero-content">
           <span className="page-hero-eyebrow fade-up">
             <span className="dot" />
-            About Mira Estate
+            About ESTATEMENT
           </span>
           <h1 className="page-hero-title fade-up fade-up-delay-1">
             Built on trust, driven by data
@@ -82,7 +73,7 @@ export default function About() {
               <span className="section-eyebrow">Our Story</span>
               <h2>From a single office to a trusted advisory</h2>
               <p>
-                Mira Estate Advisory was founded in 2007 with a simple
+                ESTATEMENT was founded in 2007 with a simple
                 conviction: property decisions deserve the same rigor as any
                 major investment. Yet most buyers and investors were left to
                 navigate the market alone, armed with little more than listing

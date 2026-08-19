@@ -16,22 +16,22 @@ const details = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 123-4567",
+    value: "+91-8750080023",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "hello@miraestate.co",
+    value: "info@estatement.in | ajay@estatement.in",
   },
   {
     icon: MapPin,
     label: "Office",
-    value: "450 Market Street, Suite 1200, San Francisco, CA 94105",
+    value: "A-74A,SECTOR 136,Noida,Gautam Buddha Nagar,Uttar Pradesh,201305-India",
   },
   {
     icon: Clock,
     label: "Hours",
-    value: "Mon – Fri, 9:00 AM – 6:00 PM PT",
+    value: "Mon – Fri, 9:00 AM – 6:00 PM IST",
   },
 ];
 

@@ -47,7 +47,7 @@ const ContactUs = ({}: ContactUsProps) => {
         <div className="contact-detail-grid">
           <div>
             <h3>Head Office</h3>
-            <p>A-74A, Sector 136, Noida 201301</p>
+            <p>A-74A,SECTOR 136,Noida,Gautam Buddha Nagar,Uttar Pradesh,201305-India</p>
           </div>
           <div>
             <h3>Phone</h3>
@@ -55,7 +55,7 @@ const ContactUs = ({}: ContactUsProps) => {
           </div>
           <div>
             <h3>Email</h3>
-            <p>estatementgroup@gmail.com</p>
+            <p>info@estatement.in | ajay@estatement.in</p>
           </div>
         </div>
       </section>

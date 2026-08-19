@@ -9,10 +9,12 @@
 /* ============ Home ============ */
 .home-hero {
   position: relative;
-  min-height: 92vh;
+  height: calc(100vh - 68px);
+  height: calc(100dvh - 68px);
+  margin-top: 68px;
   display: flex;
   align-items: center;
-  padding: 120px 0 80px;
+  padding: 0;
   background: var(--brand-green);
   overflow: hidden;
 }
@@ -124,15 +126,16 @@
   position: relative;
   z-index: 2;
   max-width: 760px;
+  margin-left: clamp(0px, 4vw, 90px);
 }
 
 .home-hero h1 {
-  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  font-size: clamp(2.25rem, 5vw, 3.55rem);
   color: var(--surface);
   font-weight: 700;
-  line-height: 1.08;
+  line-height: 1.12;
   letter-spacing: -0.02em;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .home-hero h1 .accent {
@@ -140,16 +143,16 @@
 }
 
 .home-hero p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.84);
-  line-height: 1.7;
+  line-height: 1.65;
   max-width: 580px;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
 }
 
 .home-hero-actions {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
@@ -157,24 +160,24 @@
   position: relative;
   z-index: 2;
   display: flex;
-  gap: 56px;
-  margin-top: 64px;
-  padding-top: 40px;
+  gap: 40px;
+  margin-top: 36px;
+  padding-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .hero-stat-num {
   font-family: var(--font-display);
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   font-weight: 700;
   color: var(--brand-gold);
   line-height: 1;
 }
 
 .hero-stat-label {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.7);
-  margin-top: 8px;
+  margin-top: 6px;
   letter-spacing: 0.05em;
 }
 
@@ -182,11 +185,11 @@
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 24px;
 }
 
 .feature-card {
-  padding: 40px 32px;
+  padding: 28px 24px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -199,38 +202,55 @@
 }
 
 .feature-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
   background: var(--brand-green-50);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--brand-green);
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
 
 .feature-icon svg {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
 }
 
 .feature-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 12px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 .feature-card p {
   color: var(--text-secondary);
-  font-size: 0.96rem;
-  line-height: 1.7;
+  font-size: 0.93rem;
+  line-height: 1.65;
 }
 
 /* Property preview */
 .property-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 24px;
+}
+
+.featured-slider-shell {
+  position: relative;
+  padding: 0 42px;
+}
+
+.featured-slider-grid {
+  gap: 20px;
+  align-items: stretch;
+}
+
+.featured-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 246, 240, 0.96));
+  border: 1px solid rgba(3, 75, 64, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 18px 44px rgba(3, 75, 64, 0.08);
 }
 
 .property-card {
@@ -278,7 +298,7 @@
 }
 
 .property-card-body {
-  padding: 28px;
+  padding: 20px;
 }
 
 .property-card-body h3 {
@@ -292,7 +312,7 @@
   gap: 6px;
   font-size: 0.88rem;
   color: var(--text-muted);
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .property-location svg {
@@ -302,10 +322,11 @@
 
 .property-specs {
   display: flex;
-  gap: 20px;
-  padding-top: 18px;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  padding-top: 14px;
   border-top: 1px solid var(--border);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
 }
 
@@ -322,18 +343,53 @@
 }
 
 .property-price {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--brand-green);
-  margin-top: 16px;
+  margin-top: 14px;
+  line-height: 1.2;
+}
+
+.featured-slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(3, 75, 64, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--brand-green);
+  box-shadow: 0 12px 32px rgba(3, 75, 64, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.featured-slider-btn:hover {
+  background: var(--brand-green);
+  color: var(--surface);
+  transform: translateY(-50%) scale(1.06);
+  box-shadow: 0 18px 36px rgba(3, 75, 64, 0.18);
+}
+
+.featured-slider-btn.prev {
+  left: 0;
+}
+
+.featured-slider-btn.next {
+  right: 0;
 }
 
 /* ============ About Page ============ */
 .about-story {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  gap: 48px;
   align-items: center;
 }
 
@@ -351,25 +407,25 @@
 }
 
 .about-story-text h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 16px;
 }
 
 .about-story-text p {
   color: var(--text-secondary);
-  line-height: 1.8;
-  margin-bottom: 18px;
-  font-size: 1.02rem;
+  line-height: 1.75;
+  margin-bottom: 12px;
+  font-size: 0.98rem;
 }
 
 .values-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 24px;
 }
 
 .value-card {
-  padding: 36px 30px;
+  padding: 28px 24px;
   border-radius: var(--radius-lg);
   background: var(--brand-ivory);
   border: 1px solid var(--border);
@@ -380,8 +436,8 @@
 }
 
 .value-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
 }
 
 .value-card p {
@@ -393,7 +449,7 @@
 .team-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
+  gap: 24px;
 }
 
 .team-card {
@@ -405,7 +461,7 @@
   aspect-ratio: 1;
   border-radius: var(--radius);
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   background: var(--brand-ivory);
 }
 
@@ -422,10 +478,10 @@
 
 .team-card h4 {
   font-family: var(--font-body);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .team-role {
@@ -438,11 +494,11 @@
 .mv-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: 24px;
 }
 
 .mv-card {
-  padding: 48px 40px;
+  padding: 32px 28px;
   border-radius: var(--radius-lg);
   position: relative;
   overflow: hidden;
@@ -459,13 +515,13 @@
 }
 
 .mv-card .mv-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .mv-card.mission .mv-icon {
@@ -479,13 +535,13 @@
 }
 
 .mv-card .mv-icon svg {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
 }
 
 .mv-card h2 {
-  font-size: 1.8rem;
-  margin-bottom: 16px;
+  font-size: 1.65rem;
+  margin-bottom: 12px;
 }
 
 .mv-card.mission h2 {
@@ -493,8 +549,8 @@
 }
 
 .mv-card p {
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 0.98rem;
+  line-height: 1.7;
 }
 
 .mv-card.mission p {
@@ -508,11 +564,11 @@
 .pillars-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 16px;
 }
 
 .pillar-card {
-  padding: 36px 26px;
+  padding: 26px 22px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: var(--surface);
@@ -526,16 +582,16 @@
 
 .pillar-num {
   font-family: var(--font-display);
-  font-size: 2.2rem;
+  font-size: 1.95rem;
   font-weight: 700;
   color: var(--brand-gold);
   line-height: 1;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .pillar-card h3 {
-  font-size: 1.15rem;
-  margin-bottom: 10px;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
 }
 
 .pillar-card p {
@@ -550,11 +606,11 @@
   gap: 12px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 }
 
 .filter-chip {
-  padding: 10px 22px;
+  padding: 8px 18px;
   border-radius: 999px;
   border: 1px solid var(--border-strong);
   font-size: 0.9rem;
@@ -579,18 +635,18 @@
 .advisory-process {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 20px;
   position: relative;
 }
 
 .advisory-step {
   text-align: center;
-  padding: 32px 22px;
+  padding: 28px 20px;
 }
 
 .advisory-step-num {
-  width: 64px;
-  height: 64px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: var(--brand-green);
   color: var(--surface);
@@ -598,16 +654,16 @@
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  margin: 0 auto 20px;
+  margin: 0 auto 16px;
   position: relative;
   z-index: 1;
 }
 
 .advisory-step h3 {
-  font-size: 1.15rem;
-  margin-bottom: 10px;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
 }
 
 .advisory-step p {
@@ -619,11 +675,11 @@
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 24px;
 }
 
 .service-card {
-  padding: 40px 32px;
+  padding: 28px 24px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
   background: var(--surface);
@@ -636,19 +692,19 @@
 }
 
 .service-card .feature-icon {
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 }
 
 .service-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 12px;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
 }
 
 .service-card p {
   color: var(--text-secondary);
-  font-size: 0.96rem;
-  line-height: 1.7;
-  margin-bottom: 18px;
+  font-size: 0.93rem;
+  line-height: 1.65;
+  margin-bottom: 14px;
 }
 
 .service-card ul {
@@ -677,35 +733,35 @@
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 48px;
+  gap: 32px;
   align-items: start;
 }
 
 .contact-info-card {
   background: var(--brand-green);
   border-radius: var(--radius-lg);
-  padding: 48px 40px;
+  padding: 32px 28px;
   color: rgba(255, 255, 255, 0.82);
 }
 
 .contact-info-card h2 {
   color: var(--surface);
-  font-size: 1.8rem;
-  margin-bottom: 16px;
+  font-size: 1.65rem;
+  margin-bottom: 12px;
 }
 
 .contact-info-card > p {
   font-size: 1rem;
   line-height: 1.7;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
   color: rgba(255, 255, 255, 0.75);
 }
 
 .contact-detail {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
-  padding: 20px 0;
+  gap: 14px;
+  padding: 13px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -747,17 +803,17 @@
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 48px 40px;
+  padding: 32px 28px;
 }
 
 .contact-form-card h2 {
-  font-size: 1.8rem;
+  font-size: 1.65rem;
   margin-bottom: 8px;
 }
 
 .contact-form-card > p {
   color: var(--text-secondary);
-  margin-bottom: 32px;
+  margin-bottom: 22px;
 }
 
 .form-row {
@@ -767,7 +823,7 @@
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .form-group label {
@@ -775,14 +831,14 @@
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
   width: 100%;
-  padding: 14px 16px;
+  padding: 11px 14px;
   border: 1.5px solid var(--border);
   border-radius: var(--radius-sm);
   font-family: inherit;
@@ -802,7 +858,7 @@
 
 .form-group textarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: 108px;
 }
 
 .form-success {
@@ -839,7 +895,7 @@
 
   .about-story {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
   }
 
   .about-story-img {
@@ -864,7 +920,7 @@
   }
 
   .home-hero-stats {
-    gap: 32px;
+    gap: 28px;
     flex-wrap: wrap;
   }
 
@@ -901,16 +957,22 @@
   }
 
   .home-hero-stats {
-    gap: 24px;
+    gap: 16px;
+  }
+
+  .home-hero {
+    height: calc(100vh - 68px);
+    height: calc(100dvh - 68px);
+    margin-top: 68px;
   }
 
   .hero-stat-num {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .mv-card,
   .contact-info-card,
   .contact-form-card {
-    padding: 32px 24px;
+    padding: 24px 20px;
   }
 }

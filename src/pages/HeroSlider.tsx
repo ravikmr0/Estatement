@@ -13,35 +13,35 @@ type Slide = {
 
 const slides: Slide[] = [
   {
-    img: "https://images.pexels.com/photos/28304971/pexels-photo-28304971.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600",
+    img: "/public/hero/balcony_view.jpg",
     eyebrow: "Residential Living",
     title: "Premium homes in",
     accent: "Noida's prime sectors",
     text: "Discover handpicked residential properties across Noida — from luxury high-rises to gated township villas in the city's most sought-after sectors.",
   },
   {
-    img: "https://images.pexels.com/photos/6259182/pexels-photo-6259182.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600",
+    img: "/public/hero/yamuna_expressway.png",
     eyebrow: "Yamuna Expressway",
     title: "Invest along the",
     accent: "Yamuna Expressway",
     text: "Fast-appreciating corridor connecting Noida to Agra. Invest in residential and commercial projects along one of North India's most strategic growth belts.",
   },
   {
-    img: "https://images.pexels.com/photos/18740807/pexels-photo-18740807.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600",
+    img: "/public/hero/top_building.jpg",
     eyebrow: "Commercial Spaces",
     title: "Commercial real estate",
     accent: "that drives returns",
     text: "Grade-A office spaces, retail shops, and business parks across Noida and Greater Noida — built for rental yield and long-term capital appreciation.",
   },
   {
-    img: "https://images.pexels.com/photos/36324754/pexels-photo-36324754.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600",
+    img: "/public/hero/pool_view.jpg",
     eyebrow: "Township Living",
     title: "Residential plots &",
     accent: "ready-to-move homes",
     text: "Build your dream home or invest in plotted developments across YEIDA and Noida Extension — with clear titles and approved layouts from leading developers.",
   },
   {
-    img: "https://images.pexels.com/photos/36422828/pexels-photo-36422828.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600",
+    img: "/public/hero/yeida_plots.png",
     eyebrow: "YEIDA Authority Plots",
     title: "YEIDA authority plots —",
     accent: "secure & high-growth",

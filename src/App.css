@@ -154,10 +154,10 @@ button, input, select, textarea {
 .nav-link {
   position: relative;
   color: rgba(18, 30, 24, 0.82);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.02em;
-  padding: 4px 0;
+  padding: 3px 0;
   transition: color 0.25s ease;
 }
 
@@ -200,9 +200,9 @@ button, input, select, textarea {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  padding: 11px 24px;
+  padding: 10px 22px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   letter-spacing: 0.02em;
   transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
@@ -324,11 +324,13 @@ button, input, select, textarea {
 
 /* ===== Hero ===== */
 .hero-section {
-  min-height: 78vh;
+  height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
-  padding: 88px 28px 64px;
+  padding: 0 28px;
   background-size: cover;
   background-position: center;
   color: var(--surface);
@@ -419,18 +421,18 @@ button, input, select, textarea {
 }
 
 .hero-copy {
-  margin: 20px 0 0;
+  margin: 16px 0 0;
   max-width: 600px;
-  font-size: 1rem;
-  line-height: 1.75;
+  font-size: 0.95rem;
+  line-height: 1.7;
   color: rgba(255, 255, 255, 0.88);
 }
 
 .hero-actions {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   flex-wrap: wrap;
-  margin-top: 28px;
+  margin-top: 24px;
 }
 
 .scroll-indicator {
@@ -477,19 +479,19 @@ button, input, select, textarea {
 
 /* ===== Sections ===== */
 .section {
-  padding: 56px 28px;
+  padding: 48px 28px;
 }
 
 .section-heading {
   max-width: 720px;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 .section-title {
   margin: 12px 0 0;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 3.4vw, 3.2rem);
-  line-height: 1.05;
+  font-size: clamp(1.85rem, 3.2vw, 2.95rem);
+  line-height: 1.08;
   letter-spacing: -0.02em;
   color: var(--text-primary);
 }
@@ -538,20 +540,20 @@ button, input, select, textarea {
 .intro-grid {
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
-  gap: 36px;
+  gap: 32px;
 }
 
 .intro-image {
   width: 100%;
   height: 100%;
-  min-height: 320px;
+  min-height: 300px;
   border-radius: 20px;
   object-fit: cover;
   display: block;
 }
 
 .intro-body p + p {
-  margin-top: 14px;
+  margin-top: 12px;
 }
 
 .intro-body p,
@@ -640,11 +642,11 @@ button, input, select, textarea {
   position: relative;
   z-index: 1;
   min-height: 342px;
-  padding: 26px 24px 24px;
+  padding: 22px 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 11px;
+  gap: 9px;
   color: var(--surface);
 }
 
@@ -660,8 +662,8 @@ button, input, select, textarea {
   margin: 0;
   max-width: 13ch;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(1.35rem, 1.8vw, 1.7rem);
-  line-height: 1.08;
+  font-size: clamp(1.25rem, 1.7vw, 1.55rem);
+  line-height: 1.1;
   letter-spacing: -0.015em;
   color: var(--surface);
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.22);
@@ -670,8 +672,8 @@ button, input, select, textarea {
 .category-card p {
   margin: 0;
   max-width: 30ch;
-  font-size: 0.9rem;
-  line-height: 1.55;
+  font-size: 0.85rem;
+  line-height: 1.5;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -728,14 +730,14 @@ button, input, select, textarea {
 .filter-tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 28px;
+  gap: 10px;
+  margin-bottom: 24px;
 }
 
 .filter-pill {
   border: 1px solid rgba(3, 75, 64, 0.18);
   background: rgba(245, 246, 240, 0.86);
-  padding: 10px 18px;
+  padding: 8px 16px;
   border-radius: 999px;
   color: var(--text-secondary);
   cursor: pointer;
@@ -785,7 +787,7 @@ button, input, select, textarea {
 
 .property-body,
 .detail-hero-copy {
-  padding: 24px;
+  padding: 20px;
 }
 
 .property-tag {
@@ -800,21 +802,21 @@ button, input, select, textarea {
 
 .property-body h3,
 .detail-hero-copy h1 {
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   line-height: 1.15;
   color: var(--text-primary);
 }
 
 .detail-hero-copy h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .property-location {
-  margin: 0 0 16px;
+  margin: 0 0 14px;
   color: var(--text-secondary);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
 }
 
 .property-meta {
@@ -896,7 +898,7 @@ button, input, select, textarea {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 22px;
+  padding: 9px 20px;
   border-radius: 999px;
   border: 1px solid rgba(3, 75, 64, 0.18);
   background: var(--surface);
@@ -930,14 +932,14 @@ button, input, select, textarea {
 
 .why-grid {
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 18px;
+  gap: 14px;
 }
 
 .why-card {
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.11);
   border-radius: 20px;
-  padding: 24px;
+  padding: 20px;
   transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
@@ -947,9 +949,9 @@ button, input, select, textarea {
 }
 
 .why-card h3 {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   font-family: 'Playfair Display', serif;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: var(--surface);
 }
 
@@ -966,21 +968,21 @@ button, input, select, textarea {
 .location-panel {
   grid-template-columns: 1.05fr 0.95fr;
   align-items: center;
-  gap: 36px;
+  gap: 32px;
 }
 
 .location-copy p {
-  margin: 0 0 20px;
+  margin: 0 0 16px;
 }
 
 .location-grid-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 14px;
+  gap: 10px;
 }
 
 .location-card {
-  min-height: 96px;
+  min-height: 80px;
   border-radius: 16px;
   border: 1px solid rgba(3, 75, 64, 0.14);
   background: var(--surface);
@@ -988,11 +990,11 @@ button, input, select, textarea {
   place-items: center;
   color: var(--brand-green-dark);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .location-visual {
-  min-height: 340px;
+  min-height: 300px;
   border-radius: 26px;
   background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80');
   background-size: cover;
@@ -1016,11 +1018,11 @@ button, input, select, textarea {
 .mission-grid {
   grid-template-columns: 1.05fr 0.95fr;
   align-items: center;
-  gap: 36px;
+  gap: 32px;
 }
 
 .mission-copy p {
-  margin: 16px 0 0;
+  margin: 12px 0 0;
 }
 
 .mission-copy .section-eyebrow {
@@ -1028,7 +1030,7 @@ button, input, select, textarea {
 }
 
 .mission-visual {
-  min-height: 360px;
+  min-height: 320px;
   border-radius: 26px;
   background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80');
   background-size: cover;
@@ -1054,13 +1056,13 @@ button, input, select, textarea {
   background: var(--surface);
   border: 1px solid rgba(3, 75, 64, 0.08);
   border-radius: 20px;
-  padding: 26px;
+  padding: 22px;
 }
 
 .mission-detail-grid h3 {
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   font-family: 'Playfair Display', serif;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   color: var(--text-primary);
 }
 
@@ -1075,14 +1077,14 @@ button, input, select, textarea {
 
 .journey-grid {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 18px;
+  gap: 14px;
 }
 
 .journey-card {
   background: rgba(3, 75, 64, 0.04);
   border: 1px solid rgba(3, 75, 64, 0.1);
   border-radius: 20px;
-  padding: 26px;
+  padding: 22px;
   transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
@@ -1110,14 +1112,14 @@ button, input, select, textarea {
 
 .advisory-grid {
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 18px;
+  gap: 14px;
 }
 
 .advisory-card {
   background: var(--surface);
   border: 1px solid rgba(3, 75, 64, 0.08);
   border-radius: 20px;
-  padding: 24px;
+  padding: 20px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -1127,9 +1129,9 @@ button, input, select, textarea {
 }
 
 .advisory-card h3 {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--text-primary);
 }
 
@@ -1165,7 +1167,7 @@ button, input, select, textarea {
 
 .cta-panel-inner h2 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
   line-height: 1.1;
   color: var(--text-primary);
   margin: 0;
@@ -1174,7 +1176,7 @@ button, input, select, textarea {
 .cta-panel-inner p {
   max-width: 56ch;
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.93rem;
 }
 
 .cta-panel-inner .button {
@@ -1200,8 +1202,8 @@ button, input, select, textarea {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.11);
   border-radius: 28px;
-  padding: 34px;
-  gap: 36px;
+  padding: 30px;
+  gap: 32px;
 }
 
 .contact-copy {
@@ -1248,7 +1250,7 @@ button, input, select, textarea {
 .contact-form select,
 .contact-form textarea {
   width: 100%;
-  padding: 12px 14px;
+  padding: 11px 13px;
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   background: rgba(255, 255, 255, 0.08);
@@ -1308,12 +1310,12 @@ button, input, select, textarea {
 .detail-hero {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
-  gap: 28px;
+  gap: 24px;
   align-items: stretch;
 }
 
 .detail-hero-image {
-  min-height: 440px;
+  min-height: 400px;
   border-radius: 26px;
 }
 
@@ -1321,7 +1323,7 @@ button, input, select, textarea {
   background: var(--surface);
   border: 1px solid rgba(3, 75, 64, 0.08);
   border-radius: 24px;
-  padding: 32px;
+  padding: 28px;
 }
 
 .detail-hero-copy .eyebrow {
@@ -1331,18 +1333,18 @@ button, input, select, textarea {
 
 .detail-meta {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   flex-wrap: wrap;
-  margin: 14px 0 18px;
+  margin: 10px 0 14px;
   color: var(--text-secondary);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
 }
 
 .detail-metrics {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  margin: 20px 0 22px;
+  gap: 12px;
+  margin: 16px 0 18px;
 }
 
 .detail-metrics strong {
@@ -1375,7 +1377,7 @@ button, input, select, textarea {
   background: var(--surface);
   border: 1px solid rgba(3, 75, 64, 0.08);
   border-radius: 20px;
-  padding: 24px;
+  padding: 20px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -1385,9 +1387,9 @@ button, input, select, textarea {
 }
 
 .highlight-grid h3 {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--text-primary);
 }
 
@@ -1398,11 +1400,11 @@ button, input, select, textarea {
 /* ===== Gallery ===== */
 .gallery-grid {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
+  gap: 12px;
 }
 
 .gallery-thumb {
-  min-height: 200px;
+  min-height: 180px;
   border-radius: 20px;
   background-size: cover;
   background-position: center;
@@ -1425,7 +1427,7 @@ button, input, select, textarea {
 }
 
 .map-visual {
-  min-height: 320px;
+  min-height: 280px;
   border-radius: 22px;
   background: linear-gradient(135deg, rgba(3, 75, 64, 0.06), rgba(3, 75, 64, 0.16));
   position: relative;
@@ -1451,7 +1453,7 @@ button, input, select, textarea {
 }
 
 .footer-wrapper {
-  padding: 56px 28px 36px;
+  padding: 48px 28px 32px;
   max-width: var(--max-content);
   margin-inline: auto;
 }
@@ -1459,7 +1461,7 @@ button, input, select, textarea {
 .footer-inner {
   display: grid;
   grid-template-columns: 1.4fr repeat(3, 1fr);
-  gap: 40px 36px;
+  gap: 36px 32px;
   align-items: start;
 }
 
@@ -1572,8 +1574,31 @@ button, input, select, textarea {
   line-height: 1.5;
 }
 
+.footer-contact-block {
+  display: grid;
+  gap: 4px;
+  align-items: start;
+  text-align: left;
+}
+
+.footer-contact-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+  font-weight: 600;
+}
+
+.footer-contact-block a {
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  line-height: 1.6;
+}
+
 .footer-contact-item:hover,
-.footer-contact-item:focus-visible {
+.footer-contact-item:focus-visible,
+.footer-contact-block a:hover,
+.footer-contact-block a:focus-visible {
   color: var(--brand-gold);
   outline: none;
 }
@@ -1867,7 +1892,7 @@ button, input, select, textarea {
   }
 
   .hero-section {
-    padding: 80px 22px 52px;
+    padding: 0 22px;
   }
 
   .section {
@@ -1882,7 +1907,7 @@ button, input, select, textarea {
 
 @media (max-width: 768px) {
   .footer-wrapper {
-    padding: 44px 24px 32px;
+    padding: 40px 24px 28px;
   }
 
   .footer-inner {
@@ -1946,8 +1971,8 @@ button, input, select, textarea {
   }
 
   .hero-section {
-    min-height: 72vh;
-    padding: 76px 20px 48px;
+    height: 100dvh;
+    padding: 0 20px;
   }
 
   .section {
@@ -2093,7 +2118,8 @@ button, input, select, textarea {
   }
 
   .hero-section {
-    padding: 70px 18px 44px;
+    height: 100dvh;
+    padding: 0 18px;
   }
 
   .hero-slide-button.prev {

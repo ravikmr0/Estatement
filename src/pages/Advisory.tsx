@@ -142,7 +142,7 @@ export default function Advisory() {
                 structure.
               </p>
               <p>
-                With Mira Estate Advisory, you get a partner who analyses every
+                With ESTATEMENT, you get a partner who analyses every
                 angle, challenges every assumption, and stands beside you from
                 the first conversation to the final signature.
               </p>
