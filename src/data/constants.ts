@@ -137,7 +137,7 @@ export const configOptions = ['All', '2 BHK', '3 BHK', '4 BHK', 'Premium Plot']
 
 export const heroSlides = [
   {
-    image: '/public/hero/balcony_view.jpg',
+    image: '/hero/balcony_view.jpg',
     eyebrow: 'ESTATEMENT REALTY',
     title: 'Focused on Noida.',
     supportingText: 'Premium residences and commercial opportunities across Noida.',
@@ -146,7 +146,7 @@ export const heroSlides = [
     location: 'Noida',
   },
   {
-    image: '/public/hero/yamuna_expressway.png',
+    image: '/hero/yamuna_expressway.png',
     eyebrow: 'ESTATEMENT REALTY',
     title: 'Focused on Noida Expressway.',
     supportingText: 'Residential and commercial opportunities along Noida Expressway.',
@@ -155,7 +155,7 @@ export const heroSlides = [
     location: 'Noida Expressway',
   },
   {
-    image: '/public/hero/top_building.jpg',
+    image: '/hero/top_building.jpg',
     eyebrow: 'ESTATEMENT REALTY',
     title: 'Focused on Greater Noida.',
     supportingText: 'Residences, commercial spaces and emerging investment opportunities.',
@@ -164,7 +164,7 @@ export const heroSlides = [
     location: 'Greater Noida',
   },
   {
-    image: '/public/hero/pool_view.jpg',
+    image: '/hero/pool_view.jpg',
     eyebrow: 'ESTATEMENT REALTY',
     title: 'Focused on YEIDA.',
     supportingText: 'YEIDA Authority Plots and strategic real estate opportunities.',

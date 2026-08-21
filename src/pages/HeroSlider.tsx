@@ -13,35 +13,35 @@ type Slide = {
 
 const slides: Slide[] = [
   {
-    img: "/public/hero/balcony_view.jpg",
+    img: "/hero/balcony_view.jpg",
     eyebrow: "Residential Living",
     title: "Premium homes in",
     accent: "Noida's prime sectors",
     text: "Discover handpicked residential properties across Noida — from luxury high-rises to gated township villas in the city's most sought-after sectors.",
   },
   {
-    img: "/public/hero/yamuna_expressway.png",
+    img: "/hero/yamuna_expressway.png",
     eyebrow: "Yamuna Expressway",
     title: "Invest along the",
     accent: "Yamuna Expressway",
     text: "Fast-appreciating corridor connecting Noida to Agra. Invest in residential and commercial projects along one of North India's most strategic growth belts.",
   },
   {
-    img: "/public/hero/top_building.jpg",
+    img: "/hero/top_building.jpg",
     eyebrow: "Commercial Spaces",
     title: "Commercial real estate",
     accent: "that drives returns",
     text: "Grade-A office spaces, retail shops, and business parks across Noida and Greater Noida — built for rental yield and long-term capital appreciation.",
   },
   {
-    img: "/public/hero/pool_view.jpg",
+    img: "/hero/pool_view.jpg",
     eyebrow: "Township Living",
     title: "Residential plots &",
     accent: "ready-to-move homes",
     text: "Build your dream home or invest in plotted developments across YEIDA and Noida Extension — with clear titles and approved layouts from leading developers.",
   },
   {
-    img: "/public/hero/yeida_plots.png",
+    img: "/hero/yeida_plots.png",
     eyebrow: "YEIDA Authority Plots",
     title: "YEIDA authority plots —",
     accent: "secure & high-growth",

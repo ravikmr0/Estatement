@@ -8,7 +8,7 @@ import {
 import "./pages.css";
 
 const storyImg =
-  "/public/about/estatement_building.png";
+  "/about/estatement_building.png";
 
 const values = [
   {
