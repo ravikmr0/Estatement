@@ -306,6 +306,13 @@
   margin-bottom: 8px;
 }
 
+.property-investment {
+  margin-top: 8px;
+  color: var(--brand-green);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
 .property-location {
   display: flex;
   align-items: center;

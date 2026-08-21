@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://estatement.in/sitemap.xml

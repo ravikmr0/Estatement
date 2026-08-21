@@ -133,8 +133,9 @@ export default function Home() {
             <span className="section-eyebrow">Why ESTATEMENT</span>
             <h2 className="section-title">Advisory that puts you first</h2>
             <p className="section-subtitle">
-              We're not a listing platform — we're your strategic partner in
-              every property decision, from first viewing to final closing.
+              We help you make important property decisions with local market
+              context, practical analysis, and support from first shortlist to
+              final closing.
             </p>
           </div>
           <div className="feature-grid">
@@ -157,8 +158,8 @@ export default function Home() {
             <span className="section-eyebrow">Featured Listings</span>
             <h2 className="section-title">Curated properties</h2>
             <p className="section-subtitle">
-              Hand-selected opportunities vetted by our advisory team for
-              location, quality, and investment potential.
+              A focused selection of residences, commercial spaces, and plots
+              across Noida, Greater Noida, and the YEIDA growth corridor.
             </p>
           </div>
           <div className="featured-slider-shell">
@@ -223,17 +224,17 @@ export default function Home() {
             <div className="feature-card">
               <div className="feature-icon"><Compass /></div>
               <h3>Discover</h3>
-              <p>We start with your goals, timeline, and risk tolerance to define what the right property looks like for you.</p>
+              <p>We understand your purpose, budget, timeline, and preferred location before defining the right property brief.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon"><LineChart /></div>
               <h3>Analyze</h3>
-              <p>Our team runs the numbers on every opportunity — yield, appreciation, tax implications, and exit strategy.</p>
+              <p>We compare pricing, connectivity, rental potential, approvals, and the risks that can affect long-term value.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon"><Sparkles /></div>
               <h3>Execute</h3>
-              <p>From negotiation to closing, we manage every detail so you can move forward with total confidence.</p>
+              <p>From site visits and negotiations to due diligence and closing, we keep the next steps clear and well coordinated.</p>
             </div>
           </div>
         </div>
@@ -244,7 +245,7 @@ export default function Home() {
           <div className="cta-band-inner">
             <div className="cta-band-text">
               <h2>Ready to make your next move?</h2>
-              <p>Book a free 30-minute consultation with our advisory team. No pressure, just clarity.</p>
+              <p>Share your requirement with our advisory team and get a clear view of the next practical step. No pressure, just clarity.</p>
             </div>
             <div className="cta-band-actions">
               <Link to="/contact" className="btn btn-gold btn-lg">

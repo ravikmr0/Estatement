@@ -65,9 +65,9 @@ export default function Advisory() {
             Investment advisory, built around you
           </h1>
           <p className="page-hero-subtitle fade-up fade-up-delay-2">
-            From first acquisition to portfolio optimisation, we provide the
-            strategic guidance and rigorous analysis to help you invest with
-            confidence.
+            From choosing a first investment to reviewing an existing
+            portfolio, we bring structure to the decision with local insight,
+            practical analysis, and clear next steps.
           </p>
         </div>
       </section>
@@ -78,7 +78,8 @@ export default function Advisory() {
             <span className="section-eyebrow">How We Work</span>
             <h2 className="section-title">A proven four-step process</h2>
             <p className="section-subtitle">
-              Structured, transparent, and tailored to you at every stage.
+              A simple process that keeps your objectives visible and every
+              important assumption open for discussion.
             </p>
           </div>
           <div className="advisory-process">
@@ -99,8 +100,8 @@ export default function Advisory() {
             <span className="section-eyebrow">What We Offer</span>
             <h2 className="section-title">Comprehensive advisory services</h2>
             <p className="section-subtitle">
-              Everything you need to make, manage, and optimise property
-              investments — all under one roof.
+              Support for the decisions that matter before, during, and after
+              a property transaction.
             </p>
           </div>
           <div className="services-grid">
@@ -135,25 +136,24 @@ export default function Advisory() {
               <span className="section-eyebrow">Why It Matters</span>
               <h2>Advice that pays for itself</h2>
               <p>
-                A single poor property decision can cost far more than a
-                lifetime of good advice. Our clients work with us not just to
-                find properties, but to avoid the costly mistakes that erode
-                returns — overpaying, misjudging risk, or choosing the wrong
-                structure.
+                A poor property decision can stay expensive for years. Our
+                clients work with us not only to find opportunities, but also
+                to avoid overpaying, overlooking legal or location risks, and
+                choosing an asset that does not match their time horizon.
               </p>
               <p>
-                With ESTATEMENT, you get a partner who analyses every
-                angle, challenges every assumption, and stands beside you from
+                With ESTATEMENT, you get a partner who reviews the numbers,
+                asks the difficult questions, and explains the trade-offs from
                 the first conversation to the final signature.
               </p>
               <div style={{ marginTop: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                   <Wallet style={{ color: "var(--brand-gold)" }} />
-                  <span style={{ fontWeight: 600, color: "var(--text-primary)" }}>Transparent fees</span>
+                  <span style={{ fontWeight: 600, color: "var(--text-primary)" }}>Clear engagement terms</span>
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                   <ShieldCheck style={{ color: "var(--brand-gold)" }} />
-                  <span style={{ fontWeight: 600, color: "var(--text-primary)" }}>Aligned interests</span>
+                  <span style={{ fontWeight: 600, color: "var(--text-primary)" }}>Advice matched to your goals</span>
                 </div>
               </div>
             </div>

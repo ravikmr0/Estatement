@@ -46,8 +46,8 @@ export default function Mission() {
             Mission & Vision
           </h1>
           <p className="page-hero-subtitle fade-up fade-up-delay-2">
-            The principles that drive every decision we make — and the future
-            we're building toward alongside our clients.
+            The principles that guide how we evaluate opportunities, advise
+            clients, and build long-term relationships in the NCR market.
           </p>
         </div>
       </section>
@@ -59,22 +59,22 @@ export default function Mission() {
               <div className="mv-icon"><Target /></div>
               <h2>Our Mission</h2>
               <p>
-                To empower every client with the clarity, data, and strategic
-                guidance needed to make property decisions with total
-                confidence. We exist to replace guesswork with rigor, and
-                pressure with patience — ensuring that every investment we
-                advise on is the right one for the person making it.
+                To give every client the clarity, context, and practical
+                guidance needed to make a well-informed property decision. We
+                replace guesswork and sales pressure with patient evaluation,
+                transparent communication, and advice that reflects the
+                client's actual priorities.
               </p>
             </div>
             <div className="mv-card vision">
               <div className="mv-icon"><Eye /></div>
               <h2>Our Vision</h2>
               <p>
-                To be the most trusted name in property advisory — a firm where
-                institutional-grade analysis meets genuine, client-first
-                partnership. We envision a market where no one has to navigate
-                a major property decision alone, and where every investment
-                is made with eyes wide open.
+                To become a trusted property advisory partner across Noida and
+                the wider NCR: known for honest recommendations, local market
+                understanding, and dependable support from research through
+                transaction. We want every client to move forward with a clear
+                view of both opportunity and risk.
               </p>
             </div>
           </div>
@@ -87,8 +87,8 @@ export default function Mission() {
             <span className="section-eyebrow">Strategic Pillars</span>
             <h2 className="section-title">The foundations of our approach</h2>
             <p className="section-subtitle">
-              Four principles that shape how we analyse, advise, and act on
-              behalf of every client.
+              Four principles that shape how we research, advise, and act on
+              behalf of every client and every property brief.
             </p>
           </div>
           <div className="pillars-grid">
@@ -110,15 +110,16 @@ export default function Mission() {
               <span className="section-eyebrow">Our Commitment</span>
               <h2>Advice you can build a future on</h2>
               <p>
-                We believe property is too important — and too personal — to be
-                treated as a transaction. That's why we invest heavily in
-                research, take the time to understand your full financial
-                picture, and stand beside you long after the deal closes.
+                Property is too important and too personal to be treated as a
+                quick transaction. We take time to understand your financial
+                picture, study the location and project fundamentals, and
+                explain the decision in language that is easy to act on.
               </p>
               <p>
-                Whether you're buying your first home, expanding a portfolio, or
-                planning an exit, our commitment is the same: honest guidance,
-                rigorous analysis, and a partnership that lasts.
+                Whether you are buying your first home, expanding a portfolio,
+                selecting a plot, or planning an exit, our commitment stays
+                the same: honest guidance, relevant analysis, and support that
+                continues beyond the first meeting.
               </p>
               <div style={{ marginTop: 28 }}>
                 <Link to="/about" className="btn btn-primary">

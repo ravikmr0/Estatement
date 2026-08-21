@@ -73,9 +73,9 @@ export default function Contact() {
             Let's talk about your goals
           </h1>
           <p className="page-hero-subtitle fade-up fade-up-delay-2">
-            Whether you're exploring your first purchase or optimising a
-            portfolio, our team is ready to help. Book a consultation or send
-            us a message — we typically respond within one business day.
+            Whether you are exploring a first purchase, a plot, a commercial
+            opportunity, or a portfolio review, share a few details and our
+            team will help you understand the next step.
           </p>
         </div>
       </section>
@@ -86,8 +86,9 @@ export default function Contact() {
             <div className="contact-info-card">
               <h2>Contact details</h2>
               <p>
-                Reach out through any channel below, or use the form to send us
-                a detailed message about your property goals.
+                Reach out through any channel below, or use the form to tell us
+                about your budget, preferred location, timeline, and property
+                goals.
               </p>
               {details.map((d) => (
                 <div key={d.label} className="contact-detail">
@@ -104,7 +105,8 @@ export default function Contact() {
 
             <div className="contact-form-card">
               <h2>Send us a message</h2>
-              <p>Fill in the form below and we'll get back to you shortly.</p>
+              <p>Tell us what you are looking for. We will review your
+                requirement and respond with the most relevant next step.</p>
 
               {sent && (
                 <div className="form-success">
@@ -144,17 +146,18 @@ export default function Contact() {
                       id="phone"
                       name="phone"
                       type="tel"
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="+91 98765 43210"
                     />
                   </div>
                   <div className="form-group">
                     <label htmlFor="interest">I'm interested in</label>
                     <select id="interest" name="interest" defaultValue="">
-                      <option value="" disabled>Select a service</option>
+                      <option value="" disabled>Select a requirement</option>
                       <option value="buying">Buying a property</option>
                       <option value="selling">Selling a property</option>
                       <option value="advisory">Investment advisory</option>
                       <option value="portfolio">Portfolio review</option>
+                      <option value="plots">YEIDA or plotted development</option>
                       <option value="other">Something else</option>
                     </select>
                   </div>

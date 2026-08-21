@@ -31,12 +31,12 @@ const values = [
 const team = [
   {
     img: "https://images.pexels.com/photos/37148308/pexels-photo-37148308.jpeg?auto=compress&cs=tinysrgb&h=400&w=400",
-    name: "Ajay Bhadana",
+    name: "Amit Bhadana",
     role: "Founder & Managing Director",
   },
   {
     img: "https://images.pexels.com/photos/31869537/pexels-photo-31869537.jpeg?auto=compress&cs=tinysrgb&h=400&w=400",
-    name: "Amit Bhadana",
+    name: "Ajay Bhadana",
     role: "Co-Founder & Chief Advisor",
   },
  
@@ -56,9 +56,9 @@ export default function About() {
             Built on trust, driven by data
           </h1>
           <p className="page-hero-subtitle fade-up fade-up-delay-2">
-            For nearly two decades, we've helped investors and homeowners
-            navigate complex property markets with clarity, integrity, and
-            conviction.
+            We help homeowners, investors, and businesses navigate the Noida
+            property market with local insight, careful evaluation, and
+            straightforward guidance.
           </p>
         </div>
       </section>
@@ -73,21 +73,22 @@ export default function About() {
               <span className="section-eyebrow">Our Story</span>
               <h2>From a single office to a trusted advisory</h2>
               <p>
-                ESTATEMENT was founded in 2007 with a simple
-                conviction: property decisions deserve the same rigor as any
-                major investment. Yet most buyers and investors were left to
-                navigate the market alone, armed with little more than listing
-                photos and gut feeling.
+                ESTATEMENT was founded in 2007 with a simple conviction:
+                property decisions deserve the same care and discipline as any
+                major investment. In a market shaped by new infrastructure,
+                changing micro-markets, and complex paperwork, buyers need more
+                than listing photos and promises.
               </p>
               <p>
-                We set out to change that. By combining deep market expertise
-                with institutional-grade analysis, we built an advisory that
-                treats every client's goal as our own benchmark for success.
+                We set out to make the process clearer. By combining local
+                market knowledge with structured evaluation, we help clients
+                compare opportunities, understand trade-offs, and move ahead
+                only when the decision feels right for them.
               </p>
               <p>
-                Today, we've guided over 850 clients through more than £2.4
-                billion in property transactions — and we're just getting
-                started.
+                Today, our work is focused on Noida, Greater Noida, the Noida
+                Expressway, and the YEIDA growth corridor, where location,
+                connectivity, and development plans continue to shape value.
               </p>
             </div>
           </div>

@@ -14,6 +14,7 @@ import {
   Twitter,
 } from "lucide-react";
 import "./styles.css";
+import Seo from "./components/Seo";
 
 const navItems = [
   { to: "/", label: "Home", icon: Home },
@@ -43,6 +44,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <>
+      <Seo />
       <header className={`header ${scrolled ? "scrolled" : ""}`}>
         <div className="container header-inner">
           <Link to="/" className="brand" aria-label="ESTATEMENT home">
