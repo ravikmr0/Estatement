@@ -73,7 +73,7 @@ export default function About() {
               <span className="section-eyebrow">Our Story</span>
               <h2>From a single office to a trusted advisory</h2>
               <p>
-                ESTATEMENT was founded in 2007 with a simple conviction:
+                ESTATEMENT was founded in 2026 with a simple conviction:
                 property decisions deserve the same care and discipline as any
                 major investment. In a market shaped by new infrastructure,
                 changing micro-markets, and complex paperwork, buyers need more
