@@ -4,7 +4,7 @@ import { ArrowRight, MapPin, BedDouble, Maximize, Bath } from "lucide-react";
 import "./pages.css";
 
 const heroImg =
-  "https://images.pexels.com/photos/8082328/pexels-photo-8082328.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600";
+  "/hero/top_building.jpg";
 
 type Property = {
   img: string;
@@ -20,7 +20,7 @@ type Property = {
 
 const allProperties: Property[] = [
   {
-    img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=940&q=80",
+    img: "/hero/yeida_plots.png",
     tag: "Authority Plots",
     title: "YEIDA Authority Plots",
     location: "YEIDA Growth Corridor",
