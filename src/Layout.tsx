@@ -48,6 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className={`header ${scrolled ? "scrolled" : ""}`}>
         <div className="container header-inner">
           <Link to="/" className="brand" aria-label="ESTATEMENT home">
+            <img className="brand-logo" src="/estatement_logo.png" alt="ESTATEMENT Realty" />
             <span className="brand-text">
               <span className="brand-name">ESTATEMENT</span>
               <span className="brand-tag">Realty</span>
@@ -117,6 +118,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="footer-top">
             <div className="footer-brand">
               <div className="brand">
+                <img className="footer-logo-image" src="/estatement_logo.png" alt="ESTATEMENT Realty" />
                 <span className="brand-text">
                   <span className="brand-name">ESTATEMENT</span>
                   <span className="brand-tag">Realty</span>
