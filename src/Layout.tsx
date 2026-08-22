@@ -11,7 +11,7 @@ import {
   Facebook,
   Linkedin,
   Instagram,
-  Twitter,
+  Youtube,
 } from "lucide-react";
 import "./styles.css";
 import Seo from "./components/Seo";
@@ -131,7 +131,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <a href="https://www.linkedin.com/company/estatement-realty/" aria-label="LinkedIn"><Linkedin /></a>
                 <a href="https://www.instagram.com/estatementofficial/" aria-label="Instagram"><Instagram /></a>
                 <a href="https://www.facebook.com/estatementgroup" aria-label="Facebook"><Facebook /></a>
-                <a href="#" aria-label="Twitter"><Twitter /></a>
+                <a href="https://www.youtube.com/@Estatement_Group" aria-label="YouTube"><Youtube /></a>
               </div>
             </div>
 
