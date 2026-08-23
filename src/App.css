@@ -97,17 +97,17 @@ button, input, select, textarea {
   position: sticky;
   top: 0;
   z-index: 60;
-  background: rgba(245, 246, 240, 0.9);
+  background: rgba(0, 57, 50, 0.98);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(3, 75, 64, 0.08);
+  border-bottom: 1px solid rgba(217, 173, 85, 0.2);
   transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .site-header.scrolled {
-  background: rgba(245, 246, 240, 0.97);
-  border-color: rgba(3, 75, 64, 0.14);
-  box-shadow: 0 6px 20px rgba(3, 75, 64, 0.06);
+  background: rgba(0, 57, 50, 0.99);
+  border-color: rgba(217, 173, 85, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .header-inner {
@@ -128,10 +128,10 @@ button, input, select, textarea {
 
 .brand-name {
   font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
+  font-size: 1.55rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--brand-green);
+  letter-spacing: 0.12em;
+  color: var(--brand-gold);
   line-height: 1;
 }
 
@@ -153,7 +153,7 @@ button, input, select, textarea {
 
 .nav-link {
   position: relative;
-  color: rgba(18, 30, 24, 0.82);
+  color: rgba(244, 199, 107, 0.85);
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -173,7 +173,7 @@ button, input, select, textarea {
 
 .nav-link:hover,
 .nav-link:focus-visible {
-  color: var(--brand-green);
+  color: var(--brand-gold);
 }
 
 .nav-link:hover::after,
@@ -182,7 +182,7 @@ button, input, select, textarea {
 }
 
 .nav-link.active {
-  color: var(--brand-green);
+  color: var(--brand-gold);
   font-weight: 600;
 }
 
@@ -211,8 +211,8 @@ button, input, select, textarea {
 
 .nav-cta,
 .button-primary {
-  background: var(--brand-green);
-  color: var(--brand-ivory);
+  background: var(--brand-gold);
+  color: var(--brand-green-dark);
   border: 1px solid transparent;
 }
 
@@ -220,10 +220,10 @@ button, input, select, textarea {
 .button-primary:hover,
 .nav-cta:focus-visible,
 .button-primary:focus-visible {
-  background: var(--brand-gold);
+  background: var(--brand-gold-soft);
   color: var(--brand-green-dark);
   transform: translateY(-1px);
-  box-shadow: 0 8px 22px rgba(217, 173, 85, 0.28);
+  box-shadow: 0 8px 22px rgba(217, 173, 85, 0.35);
 }
 
 .button-secondary {
@@ -245,24 +245,24 @@ button, input, select, textarea {
   gap: 5px;
   width: 42px;
   height: 42px;
-  border: 1px solid rgba(3, 75, 64, 0.16);
+  border: 1px solid rgba(217, 173, 85, 0.3);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(217, 173, 85, 0.1);
   cursor: pointer;
   padding: 10px;
   transition: background-color 0.25s ease, border-color 0.25s ease;
 }
 
 .mobile-toggle:hover {
-  background: var(--surface);
-  border-color: rgba(3, 75, 64, 0.24);
+  background: rgba(217, 173, 85, 0.18);
+  border-color: rgba(217, 173, 85, 0.5);
 }
 
 .hamburger-bar {
   display: block;
   width: 100%;
   height: 2px;
-  background: var(--brand-green);
+  background: var(--brand-gold);
   border-radius: 2px;
   transition: transform 0.3s ease, opacity 0.25s ease;
 }
@@ -1447,9 +1447,37 @@ button, input, select, textarea {
 
 /* ===== Footer ===== */
 .site-footer {
-  background: var(--brand-green);
+  background: linear-gradient(135deg, rgba(0, 57, 50, 0.99) 0%, rgba(0, 40, 35, 0.99) 100%);
   color: rgba(255, 255, 255, 0.92);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(217, 173, 85, 0.25);
+}
+
+.footer-brand-section {
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid rgba(217, 173, 85, 0.2);
+  text-align: center;
+}
+
+.footer-brand-name {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--brand-gold);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.footer-tagline {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(244, 199, 107, 0.75);
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 .footer-wrapper {
@@ -1460,7 +1488,7 @@ button, input, select, textarea {
 
 .footer-inner {
   display: grid;
-  grid-template-columns: 1.4fr repeat(3, 1fr);
+  grid-template-columns: 1.1fr repeat(2, 1fr);
   gap: 36px 32px;
   align-items: start;
 }
@@ -1515,7 +1543,7 @@ button, input, select, textarea {
   font-size: 0.82rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.96);
+  color: var(--brand-gold);
   font-weight: 600;
   line-height: 1;
 }
@@ -1627,18 +1655,18 @@ button, input, select, textarea {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.8);
+  background: rgba(217, 173, 85, 0.12);
+  color: var(--brand-gold);
   transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(217, 173, 85, 0.25);
 }
 
 .footer-social a:hover,
 .footer-social a:focus-visible {
-  background: rgba(217, 173, 85, 0.25);
-  color: var(--brand-gold);
+  background: rgba(217, 173, 85, 0.3);
+  color: var(--brand-gold-soft);
   transform: translateY(-3px);
-  border-color: rgba(217, 173, 85, 0.4);
+  border-color: rgba(217, 173, 85, 0.5);
   outline: none;
 }
 
@@ -1648,9 +1676,9 @@ button, input, select, textarea {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(217, 173, 85, 0.25);
   padding: 22px 28px;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .footer-bottom-inner {
@@ -1799,7 +1827,7 @@ button, input, select, textarea {
     display: block;
     position: fixed;
     inset: 0;
-    background: rgba(3, 75, 64, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(2px);
     z-index: 65;
     opacity: 0;
@@ -1822,14 +1850,14 @@ button, input, select, textarea {
     max-width: 85vw;
     height: 100vh;
     height: 100dvh;
-    background: var(--brand-ivory);
+    background: rgba(0, 57, 50, 0.98);
     z-index: 66;
     padding: 80px 28px 32px;
     overflow-y: auto;
     gap: 24px;
     transform: translateX(100%);
     transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: -12px 0 40px rgba(3, 75, 64, 0.12);
+    box-shadow: -12px 0 40px rgba(0, 0, 0, 0.2);
   }
 
   .mobile-menu.open {
@@ -1845,17 +1873,17 @@ button, input, select, textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(3, 75, 64, 0.14);
+    border: 1px solid rgba(217, 173, 85, 0.3);
     border-radius: 12px;
-    background: var(--surface);
-    color: var(--brand-green);
+    background: rgba(217, 173, 85, 0.1);
+    color: var(--brand-gold);
     cursor: pointer;
     transition: background-color 0.25s ease, border-color 0.25s ease;
   }
 
   .mobile-menu-close:hover {
-    background: rgba(217, 173, 85, 0.12);
-    border-color: rgba(3, 75, 64, 0.22);
+    background: rgba(217, 173, 85, 0.2);
+    border-color: rgba(217, 173, 85, 0.5);
   }
 
   .mobile-menu-close svg {
@@ -1873,7 +1901,8 @@ button, input, select, textarea {
     display: block;
     padding: 14px 0;
     font-size: 1.1rem;
-    border-bottom: 1px solid rgba(3, 75, 64, 0.08);
+    border-bottom: 1px solid rgba(217, 173, 85, 0.15);
+    color: rgba(244, 199, 107, 0.85);
   }
 
   .mobile-link::after {
@@ -1881,7 +1910,7 @@ button, input, select, textarea {
   }
 
   .mobile-link.active {
-    color: var(--brand-green);
+    color: var(--brand-gold);
   }
 
   .mobile-cta {
@@ -1908,6 +1937,19 @@ button, input, select, textarea {
 @media (max-width: 768px) {
   .footer-wrapper {
     padding: 40px 24px 28px;
+  }
+
+  .footer-brand-section {
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+  }
+
+  .footer-brand-name {
+    font-size: 1.7rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.78rem;
   }
 
   .footer-inner {
@@ -2005,6 +2047,21 @@ button, input, select, textarea {
 
   .footer-wrapper {
     padding: 40px 22px 30px;
+  }
+
+  .footer-brand-section {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+
+  .footer-brand-name {
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+  }
+
+  .footer-tagline {
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
   }
 
   .footer-inner {

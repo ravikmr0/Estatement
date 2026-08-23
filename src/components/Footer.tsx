@@ -11,6 +11,12 @@ export const Footer = ({ onNavigate }: FooterProps) => {
   return (
     <footer className="site-footer">
       <div className="footer-wrapper">
+        {/* Brand Section */}
+        <div className="footer-brand-section">
+          <h2 className="footer-brand-name">ESTATEMENT</h2>
+          <p className="footer-tagline">WHERE PROPERTY BECOMES A STATEMENT</p>
+        </div>
+
         <div className="footer-inner">
           {/* Column 1: Brand */}
           <div className="footer-column footer-brand-column">

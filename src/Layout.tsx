@@ -48,6 +48,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Seo />
       <header className={`header ${scrolled ? "scrolled" : ""}`}>
         <div className="container header-inner">
+          <div className="brand-logo-section">
+            <Link to="/" className="brand-wordmark-link" aria-label="Estatement home">
+              <span className="brand-wordmark">ESTATEMENT</span>
+            </Link>
+            <span className="brand-tagline">WHERE PROPERTY BECOMES A STATEMENT.</span>
+          </div>
+
           <form className="header-search" action="/properties" method="get" role="search">
             <Search aria-hidden="true" />
             <input name="q" type="search" placeholder="Search" aria-label="Search properties" />
@@ -113,6 +120,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       <footer className="footer">
         <div className="container">
+          <div className="footer-wordmark-block">
+            <div className="footer-wordmark-shell">
+              <span className="footer-wordmark">ESTATEMENT</span>
+            </div>
+            <p className="footer-wordmark-tagline">WHERE PROPERTY BECOMES A STATEMENT.</p>
+          </div>
+
           <div className="footer-top">
             <div className="footer-brand">
               <p className="footer-about">

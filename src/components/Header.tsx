@@ -38,6 +38,9 @@ export const Header = ({ scrolled, activePath, onNavigate }: HeaderProps) => {
   return (
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-inner">
+        <div className="brand-mark">
+          <h1 className="brand-name">ESTATEMENT</h1>
+        </div>
         <nav className="main-nav" aria-label="Primary navigation">
           {navLinks.map((link) => (
             <a
