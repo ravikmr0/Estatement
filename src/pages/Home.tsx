@@ -38,74 +38,34 @@ const features = [
 
 const properties = [
   {
-    img: "https://images.pexels.com/photos/8134821/pexels-photo-8134821.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-    tag: "For Sale",
-    title: "The Hillcrest Residence",
-    location: "Noida Sector 129",
-    beds: 4,
-    baths: 3,
-    area: "3,200 sq ft",
-    price: "₹ 2.85 Cr*",
+    img: "/hero/yeida_plots.png",
+    tag: "Authority Plots",
+    title: "YEIDA Authority Plots",
+    location: "YEIDA Yamuna Expressway",
+    beds: 0,
+    baths: 0,
+    area: "50 - 600 sq. mtr.",
+    price: "₹80,000 / sq. mtr.",
   },
   {
-    img: "https://images.pexels.com/photos/16110999/pexels-photo-16110999.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-    tag: "Investment",
-    title: "Marina Bay Lofts",
-    location: "Noida Sector 150",
-    beds: 2,
-    baths: 2,
-    area: "1,480 sq ft",
-    price: "₹ 1.42 Cr*",
+    img: "/property/arqis_mall.png",
+    tag: "Commercial Property",
+    title: "ARQIS MALL",
+    location: "Noida Expressway Sector 129",
+    beds: 0,
+    baths: 0,
+    area: "Retail Shop / Studio Apartment",
+    price: "Pre-launch ₹18,999 | Launch ₹21,999",
   },
   {
-    img: "https://images.pexels.com/photos/7031604/pexels-photo-7031604.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-    tag: "New Listing",
-    title: "Oakwood Modern Villa",
-    location: "Greater Noida",
-    beds: 5,
-    baths: 4,
-    area: "4,100 sq ft",
-    price: "₹ 3.95 Cr*",
-  },
-  {
-    img: "https://images.pexels.com/photos/31737859/pexels-photo-31737859.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-    tag: "Premium",
-    title: "Skyline Heights",
-    location: "Yamuna Expressway",
-    beds: 3,
-    baths: 3,
-    area: "2,860 sq ft",
-    price: "₹ 2.30 Cr*",
-  },
-  {
-    img: "https://images.pexels.com/photos/4424414/pexels-photo-4424414.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-    tag: "Investment",
-    title: "Noida Green Court",
-    location: "Noida",
-    beds: 2,
-    baths: 2,
-    area: "1,620 sq ft",
-    price: "₹ 1.08 Cr*",
-  },
-  {
-    img: "https://images.pexels.com/photos/7031406/pexels-photo-7031406.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-    tag: "For Sale",
-    title: "Cedar Valley Villa",
-    location: "Greater Noida West",
-    beds: 4,
-    baths: 3,
-    area: "3,450 sq ft",
-    price: "₹ 2.75 Cr*",
-  },
-  {
-    img: "https://images.pexels.com/photos/27451770/pexels-photo-27451770.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-    tag: "Luxury",
-    title: "The Emerald Residences",
-    location: "Noida Sector 150",
-    beds: 4,
-    baths: 4,
-    area: "3,780 sq ft",
-    price: "₹ 4.20 Cr*",
+    img: "/property/eldeco_7peek.jpg",
+    tag: "Pre-launch Offers",
+    title: "ELDECO 7 PEAKS",
+    location: "Omicron, Greater Noida",
+    beds: 0,
+    baths: 0,
+    area: "3 & 4 BHK | Luxury Apartments & Penthouses",
+    price: "₹2.19 Cr onward",
   },
 ];
 
@@ -163,14 +123,16 @@ export default function Home() {
             </p>
           </div>
           <div className="featured-slider-shell">
-            <button
-              type="button"
-              className="featured-slider-btn prev"
-              onClick={handlePrevious}
-              aria-label="Previous featured properties"
-            >
-              <ChevronLeft size={20} />
-            </button>
+            {properties.length > itemsPerView && (
+              <button
+                type="button"
+                className="featured-slider-btn prev"
+                onClick={handlePrevious}
+                aria-label="Previous featured properties"
+              >
+                <ChevronLeft size={20} />
+              </button>
+            )}
 
             <div className="property-grid featured-slider-grid">
               {visibleProperties.map((p) => (
@@ -186,24 +148,47 @@ export default function Home() {
                       {p.location}
                     </div>
                     <div className="property-specs">
-                      <span className="property-spec"><BedDouble /> {p.beds} Beds</span>
-                      <span className="property-spec"><Bath /> {p.baths} Baths</span>
+                      {p.beds > 0 && (
+                        <span className="property-spec"><BedDouble /> {p.beds} Beds</span>
+                      )}
+                      {p.baths > 0 && (
+                        <span className="property-spec"><Bath /> {p.baths} Baths</span>
+                      )}
                       <span className="property-spec"><Maximize /> {p.area}</span>
                     </div>
                     <div className="property-price">{p.price}</div>
+                    {p.title === "ARQIS MALL" && (
+                      <div className="property-investment">Investment starting at ₹95 Lakh*</div>
+                    )}
+                    {p.title === "YEIDA Authority Plots" && (
+                      <div className="property-investment">Near Noida International Airport · Film City · High-growth corridor</div>
+                    )}
+                    {p.title === "ELDECO 7 PEAKS" && (
+                      <div className="property-investment">By Eldeco Group · RERA Approved: UPRERAPRJ106523/01/2026</div>
+                    )}
+                    <div className="property-actions">
+                      <Link to="/contact" className="btn btn-primary property-action">
+                        Get Quote
+                      </Link>
+                      <Link to="/properties" className="btn btn-outline property-action">
+                        More Details
+                      </Link>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
 
-            <button
-              type="button"
-              className="featured-slider-btn next"
-              onClick={handleNext}
-              aria-label="Next featured properties"
-            >
-              <ChevronRight size={20} />
-            </button>
+            {properties.length > itemsPerView && (
+              <button
+                type="button"
+                className="featured-slider-btn next"
+                onClick={handleNext}
+                aria-label="Next featured properties"
+              >
+                <ChevronRight size={20} />
+              </button>
+            )}
           </div>
           <div style={{ textAlign: "center", marginTop: 48 }}>
             <Link to="/properties" className="btn btn-primary btn-lg">

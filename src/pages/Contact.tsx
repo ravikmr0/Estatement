@@ -26,12 +26,12 @@ const details = [
   {
     icon: MapPin,
     label: "Office",
-    value: "A-74A,SECTOR 136,Noida,Gautam Buddha Nagar,Uttar Pradesh,201305-India",
+    value: "A-74A, Sector 136, Noida, Gautam Buddha Nagar, Uttar Pradesh 201305, India",
   },
   {
     icon: Clock,
     label: "Hours",
-    value: "Mon – Fri, 9:00 AM – 6:00 PM IST",
+    value: "Monday – Friday, 9:00 AM – 6:00 PM IST",
   },
 ];
 

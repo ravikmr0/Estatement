@@ -129,7 +129,7 @@ export default function Mission() {
               </div>
             </div>
             <div className="about-story-img">
-              <img src={heroImg} alt="Modern architecture" />
+              <img src="/property/arqis_mall.png" alt="ARQIS MALL" />
             </div>
           </div>
         </div>

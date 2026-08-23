@@ -4,6 +4,8 @@ import "./pages.css";
 
 const heroImg =
   "https://images.pexels.com/photos/7698712/pexels-photo-7698712.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600";
+const whyItMattersImg =
+  "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&h=900&w=1200";
 
 const steps = [
   { title: "Discovery", text: "We sit down to understand your goals, timeline, risk tolerance, and financial picture in detail." },
@@ -130,7 +132,7 @@ export default function Advisory() {
         <div className="container">
           <div className="about-story">
             <div className="about-story-img">
-              <img src={heroImg} alt="Advisory consultation" />
+              <img src={whyItMattersImg} alt="Property advisors reviewing an investment decision" />
             </div>
             <div className="about-story-text">
               <span className="section-eyebrow">Why It Matters</span>

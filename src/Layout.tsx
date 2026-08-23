@@ -48,10 +48,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className={`header ${scrolled ? "scrolled" : ""}`}>
         <div className="container header-inner">
           <Link to="/" className="brand" aria-label="ESTATEMENT home">
-            <img className="brand-logo" src="/estatement_logo.png" alt="ESTATEMENT Realty" />
             <span className="brand-text">
               <span className="brand-name">ESTATEMENT</span>
-              <span className="brand-tag">Realty</span>
             </span>
           </Link>
 
@@ -118,10 +116,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="footer-top">
             <div className="footer-brand">
               <div className="brand">
-                <img className="footer-logo-image" src="/estatement_logo.png" alt="ESTATEMENT Realty" />
                 <span className="brand-text">
                   <span className="brand-name">ESTATEMENT</span>
-                  <span className="brand-tag">Realty</span>
                 </span>
               </div>
               <p className="footer-about">
@@ -170,7 +166,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </div>
                 <div>
                   <strong>Office</strong>
-                  <p>A-74A, SECTOR 136, Noida, Gautam Buddha Nagar, Uttar Pradesh, 201305 - India</p>
+                  <p>A-74A, Sector 136, Noida, Gautam Buddha Nagar, Uttar Pradesh 201305, India</p>
                 </div>
               </div>
             </div>
@@ -178,7 +174,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           <div className="footer-bottom">
             <span>&copy; {new Date().getFullYear()} ESTATEMENT. All rights reserved.</span>
-            <span>Designed for confident property decisions.</span>
           </div>
         </div>
       </footer>

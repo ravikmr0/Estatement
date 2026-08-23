@@ -28,20 +28,6 @@ const values = [
   },
 ];
 
-const team = [
-  {
-    img: "https://images.pexels.com/photos/37148308/pexels-photo-37148308.jpeg?auto=compress&cs=tinysrgb&h=400&w=400",
-    name: "Amit Bhadana",
-    role: "Founder & Managing Director",
-  },
-  {
-    img: "https://images.pexels.com/photos/31869537/pexels-photo-31869537.jpeg?auto=compress&cs=tinysrgb&h=400&w=400",
-    name: "Ajay Bhadana",
-    role: "Co-Founder & Chief Advisor",
-  },
- 
-];
-
 export default function About() {
   return (
     <>
@@ -73,11 +59,14 @@ export default function About() {
               <span className="section-eyebrow">Our Story</span>
               <h2>From a single office to a trusted advisory</h2>
               <p>
-                ESTATEMENT was founded in 2026 with a simple conviction:
-                property decisions deserve the same care and discipline as any
-                major investment. In a market shaped by new infrastructure,
-                changing micro-markets, and complex paperwork, buyers need more
-                than listing photos and promises.
+                Founded in 2025 by visionary brothers Ajay Bhadana and Amit
+                Bhadana, Estatement Realty is built on a decade of
+                entrepreneurial experience across real estate, international
+                business, and the food &amp; beverage industry. Property
+                decisions deserve the same care and discipline as any major
+                investment. In a market shaped by new infrastructure, changing
+                micro-markets, and complex paperwork, buyers need more than
+                listing photos and promises.
               </p>
               <p>
                 We set out to make the process clearer. By combining local
@@ -113,30 +102,6 @@ export default function About() {
                 </div>
                 <h3>{v.title}</h3>
                 <p>{v.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="section-heading">
-            <span className="section-eyebrow">Meet the Team</span>
-            <h2 className="section-title">The people behind the advice</h2>
-            <p className="section-subtitle">
-              Seasoned professionals with decades of combined experience in
-              real estate, finance, and market analysis.
-            </p>
-          </div>
-          <div className="team-grid">
-            {team.map((m) => (
-              <div key={m.name} className="team-card">
-                <div className="team-avatar">
-                  <img src={m.img} alt={m.name} />
-                </div>
-                <h4>{m.name}</h4>
-                <div className="team-role">{m.role}</div>
               </div>
             ))}
           </div>
