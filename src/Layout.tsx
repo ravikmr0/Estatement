@@ -8,6 +8,7 @@ import {
   Users,
   Menu,
   X,
+  Search,
   Facebook,
   Linkedin,
   Instagram,
@@ -48,10 +49,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className={`header ${scrolled ? "scrolled" : ""}`}>
         <div className="container header-inner">
           <Link to="/" className="brand" aria-label="ESTATEMENT home">
-            <span className="brand-text">
-              <span className="brand-name">ESTATEMENT</span>
-            </span>
+            <img className="brand-logo" src="/estatement_logo.png" alt="ESTATEMENT" />
           </Link>
+
+          <form className="header-search" action="/properties" method="get" role="search">
+            <Search aria-hidden="true" />
+            <input name="q" type="search" placeholder="Search" aria-label="Search properties" />
+          </form>
 
           <nav className="main-nav">
             {navItems.map((item) => (
@@ -116,9 +120,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="footer-top">
             <div className="footer-brand">
               <div className="brand">
-                <span className="brand-text">
-                  <span className="brand-name">ESTATEMENT</span>
-                </span>
+                <img className="footer-logo-image" src="/estatement_logo.png" alt="ESTATEMENT" />
               </div>
               <p className="footer-about">
                 We help investors and homeowners make confident, informed
