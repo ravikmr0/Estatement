@@ -48,10 +48,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Seo />
       <header className={`header ${scrolled ? "scrolled" : ""}`}>
         <div className="container header-inner">
-          <Link to="/" className="brand" aria-label="ESTATEMENT home">
-            <img className="brand-logo" src="/estatement_logo.png" alt="ESTATEMENT" />
-          </Link>
-
           <form className="header-search" action="/properties" method="get" role="search">
             <Search aria-hidden="true" />
             <input name="q" type="search" placeholder="Search" aria-label="Search properties" />
@@ -119,9 +115,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container">
           <div className="footer-top">
             <div className="footer-brand">
-              <div className="brand">
-                <img className="footer-logo-image" src="/estatement_logo.png" alt="ESTATEMENT" />
-              </div>
               <p className="footer-about">
                 We help investors and homeowners make confident, informed
                 property decisions through data-driven advisory and curated

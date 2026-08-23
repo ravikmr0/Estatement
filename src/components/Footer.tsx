@@ -14,10 +14,6 @@ export const Footer = ({ onNavigate }: FooterProps) => {
         <div className="footer-inner">
           {/* Column 1: Brand */}
           <div className="footer-column footer-brand-column">
-            <div className="footer-logo-mark">
-              <p className="footer-logo">ESTATEMENT</p>
-              <p className="footer-company-name">Realty</p>
-            </div>
             <p className="footer-copy">
               We help investors and homeowners make confident, informed property decisions through data-driven advisory and curated real estate opportunities.
             </p>
