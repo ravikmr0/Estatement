@@ -28,6 +28,20 @@ const values = [
   },
 ];
 
+const teamMembers = [
+  {
+    name: "Amit Bhadana",
+    role: "Founder & CEO",
+    image: "/about/amit.jpg",
+  },
+  {
+    name: "Ajay Bhadana",
+    role: "Founder & CEO",
+    image: "/about/ajay.jpg",
+  },
+  
+];
+
 export default function About() {
   return (
     <>
@@ -102,6 +116,29 @@ export default function About() {
                 </div>
                 <h3>{v.title}</h3>
                 <p>{v.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-heading">
+            <span className="section-eyebrow">Our People</span>
+            <h2 className="section-title">Meet the team</h2>
+            <p className="section-subtitle">
+              Experienced professionals dedicated to helping you navigate the Noida property market with confidence and clarity.
+            </p>
+          </div>
+          <div className="team-grid">
+            {teamMembers.map((member) => (
+              <div key={member.name} className="team-card">
+                <div className="team-avatar">
+                  <img src={member.image} alt={member.name} />
+                </div>
+                <h4>{member.name}</h4>
+                <p className="team-role">{member.role}</p>
               </div>
             ))}
           </div>
