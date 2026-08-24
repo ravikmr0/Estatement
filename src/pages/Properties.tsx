@@ -1,58 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, MapPin, BedDouble, Maximize, Bath } from "lucide-react";
+import { ArrowRight, MapPin, Maximize } from "lucide-react";
 import "./pages.css";
+import { projects } from "../data/projects";
 
 const heroImg =
   "/hero/top_building.jpg";
 
-type Property = {
-  img: string;
-  tag: string;
-  title: string;
-  location: string;
-  beds: number;
-  baths: number;
-  area: string;
-  price: string;
-  category: "Residential" | "Investment" | "Commercial" | "Plots";
-};
-
-const allProperties: Property[] = [
-  {
-    img: "/hero/yeida_plots.png",
-    tag: "Authority Plots",
-    title: "YEIDA Authority Plots",
-    location: "YEIDA Yamuna Expressway",
-    beds: 0,
-    baths: 0,
-    area: "50 - 600 sq. mtr.",
-    price: "₹80,000 / sq. mtr.",
-    category: "Plots",
-  },
-  {
-    img: "/property/arqis_mall.png",
-    tag: "Commercial Property",
-    title: "ARQIS MALL",
-    location: "Noida Expressway Sector 129",
-    beds: 0,
-    baths: 0,
-    area: "Retail Shop / Studio Apartment",
-    price: "Pre-launch ₹18,999 | Launch ₹21,999",
-    category: "Commercial",
-  },
-  {
-    img: "/property/eldeco_7peek.jpg",
-    tag: "Pre-launch Offers",
-    title: "ELDECO 7 PEAKS",
-    location: "Omicron, Greater Noida",
-    beds: 0,
-    baths: 0,
-    area: "3 & 4 BHK | Luxury Apartments & Penthouses",
-    price: "₹2.19 Cr onward",
-    category: "Residential",
-  },
-];
+const allProperties = projects;
 
 const filters = ["All", "Residential", "Commercial", "Plots"] as const;
 
@@ -112,29 +67,15 @@ export default function Properties() {
                     {p.location}
                   </div>
                   <div className="property-specs">
-                    {p.beds > 0 && (
-                      <span className="property-spec"><BedDouble /> {p.beds} Beds</span>
-                    )}
-                    {p.baths > 0 && (
-                      <span className="property-spec"><Bath /> {p.baths} Baths</span>
-                    )}
                     <span className="property-spec"><Maximize /> {p.area}</span>
                   </div>
                   <div className="property-price">{p.price}</div>
-                  {p.title === "ARQIS MALL" && (
-                    <div className="property-investment">Investment starting at ₹95 Lakh*</div>
-                  )}
-                  {p.title === "YEIDA Authority Plots" && (
-                    <div className="property-investment">Near Noida International Airport · Film City · High-growth corridor</div>
-                  )}
-                  {p.title === "ELDECO 7 PEAKS" && (
-                    <div className="property-investment">By Eldeco Group · RERA Approved: UPRERAPRJ106523/01/2026</div>
-                  )}
+                  <div className="property-investment">{p.highlight}</div>
                   <div className="property-actions">
                     <Link to="/contact" className="btn btn-primary property-action">
                       Get Quote
                     </Link>
-                    <Link to="/properties" className="btn btn-outline property-action">
+                    <Link to={`/properties/${p.slug}`} className="btn btn-outline property-action">
                       More Details
                     </Link>
                   </div>

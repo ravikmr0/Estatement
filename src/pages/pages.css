@@ -233,7 +233,7 @@
 .property-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 28px;
 }
 
 .featured-slider-shell {
@@ -242,7 +242,7 @@
 }
 
 .featured-slider-grid {
-  gap: 20px;
+  gap: 28px;
   align-items: stretch;
 }
 
@@ -957,6 +957,10 @@
   .hero-slider-arrow.next {
     right: 12px;
   }
+
+  .featured-slider-shell {
+    padding-inline: 34px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -995,5 +999,9 @@
   .contact-info-card,
   .contact-form-card {
     padding: 24px 20px;
+  }
+
+  .featured-slider-shell {
+    padding-inline: 0;
   }
 }

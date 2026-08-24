@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import HeroSlider from "./HeroSlider";
 import "./pages.css";
+import { projects } from "../data/projects";
 
 const features = [
   {
@@ -36,38 +37,7 @@ const features = [
   },
 ];
 
-const properties = [
-  {
-    img: "/hero/yeida_plots.png",
-    tag: "Authority Plots",
-    title: "YEIDA Authority Plots",
-    location: "YEIDA Yamuna Expressway",
-    beds: 0,
-    baths: 0,
-    area: "50 - 600 sq. mtr.",
-    price: "₹80,000 / sq. mtr.",
-  },
-  {
-    img: "/property/arqis_mall.png",
-    tag: "Commercial Property",
-    title: "ARQIS MALL",
-    location: "Noida Expressway Sector 129",
-    beds: 0,
-    baths: 0,
-    area: "Retail Shop / Studio Apartment",
-    price: "Pre-launch ₹18,999 | Launch ₹21,999",
-  },
-  {
-    img: "/property/eldeco_7peek.jpg",
-    tag: "Pre-launch Offers",
-    title: "ELDECO 7 PEAKS",
-    location: "Omicron, Greater Noida",
-    beds: 0,
-    baths: 0,
-    area: "3 & 4 BHK | Luxury Apartments & Penthouses",
-    price: "₹2.19 Cr onward",
-  },
-];
+const properties = projects;
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -166,11 +136,14 @@ export default function Home() {
                     {p.title === "ELDECO 7 PEAKS" && (
                       <div className="property-investment">By Eldeco Group · RERA Approved: UPRERAPRJ106523/01/2026</div>
                     )}
+                    {p.title === "ACE ARTE" && (
+                      <div className="property-investment">Premium skyline residences with a refined urban address.</div>
+                    )}
                     <div className="property-actions">
                       <Link to="/contact" className="btn btn-primary property-action">
                         Get Quote
                       </Link>
-                      <Link to="/properties" className="btn btn-outline property-action">
+                      <Link to={`/properties/${p.slug}`} className="btn btn-outline property-action">
                         More Details
                       </Link>
                     </div>

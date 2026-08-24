@@ -6,6 +6,7 @@ import Mission from "./pages/Mission";
 import Properties from "./pages/Properties";
 import Advisory from "./pages/Advisory";
 import Contact from "./pages/Contact";
+import PropertyDetail from "./pages/PropertyDetail";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/mission" element={<Mission />} />
         <Route path="/properties" element={<Properties />} />
+        <Route path="/properties/:slug" element={<PropertyDetail />} />
         <Route path="/advisory" element={<Advisory />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

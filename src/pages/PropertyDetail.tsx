@@ -1,12 +1,9 @@
 import { useState, useEffect, type FormEvent, type ChangeEvent } from 'react'
-import { properties } from '../data/constants'
+import { Link, useParams } from 'react-router-dom'
+import { projects } from '../data/projects'
 
-interface PropertyDetailProps {
-  slug: string
-  onNavigate: (href: string) => void
-}
-
-const PropertyDetail = ({ slug, onNavigate }: PropertyDetailProps) => {
+const PropertyDetail = () => {
+  const { slug } = useParams<{ slug: string }>()
   const [form, setForm] = useState({
     name: '',
     phone: '',
@@ -18,7 +15,7 @@ const PropertyDetail = ({ slug, onNavigate }: PropertyDetailProps) => {
   const [submitted, setSubmitted] = useState(false)
   const [lightboxImage, setLightboxImage] = useState<string | null>(null)
 
-  const selectedProperty = properties.find((property) => property.slug === slug)
+  const selectedProperty = projects.find((property) => property.slug === slug)
 
   useEffect(() => {
     if (!submitted) return
@@ -46,15 +43,10 @@ const PropertyDetail = ({ slug, onNavigate }: PropertyDetailProps) => {
     setForm({ name: '', phone: '', email: '', interest: '', location: '', message: '' })
   }
 
-  const handleLinkClick = (href: string) => (event: React.MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault()
-    onNavigate(href)
-  }
-
   return (
     <>
       <section className="section detail-hero reveal">
-        <div className="detail-hero-image" style={{ backgroundImage: `url('${selectedProperty.image}')` }} />
+        <div className="detail-hero-image" style={{ backgroundImage: `url('${selectedProperty.img}')` }} />
         <div className="detail-hero-copy">
           <span className="eyebrow">Property Detail</span>
           <h1>{selectedProperty.title}</h1>
@@ -74,9 +66,9 @@ const PropertyDetail = ({ slug, onNavigate }: PropertyDetailProps) => {
               <p>{selectedProperty.area}</p>
             </div>
           </div>
-          <a href="/contact-us" onClick={handleLinkClick('/contact-us')} className="button button-primary">
+          <Link to="/contact" className="button button-primary">
             Request Details
-          </a>
+          </Link>
         </div>
       </section>
 

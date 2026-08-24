@@ -43,6 +43,24 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  useEffect(() => {
+    const revealElements = document.querySelectorAll<HTMLElement>('.reveal');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    revealElements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, [location.pathname]);
+
   return (
     <>
       <Seo />
@@ -120,25 +138,24 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       <footer className="footer">
         <div className="container">
-          <div className="footer-wordmark-block">
-            <div className="footer-wordmark-shell">
-              <span className="footer-wordmark">ESTATEMENT</span>
-            </div>
-            <p className="footer-wordmark-tagline">WHERE PROPERTY BECOMES A STATEMENT.</p>
-          </div>
-
           <div className="footer-top">
-            <div className="footer-brand">
-              <p className="footer-about">
-                We help investors and homeowners make confident, informed
-                property decisions through data-driven advisory and curated
-                real estate opportunities.
-              </p>
-              <div className="footer-social">
-                <a href="https://www.linkedin.com/company/estatement-realty/" aria-label="LinkedIn"><Linkedin /></a>
-                <a href="https://www.instagram.com/estatementofficial/" aria-label="Instagram"><Instagram /></a>
-                <a href="https://www.facebook.com/estatementgroup" aria-label="Facebook"><Facebook /></a>
-                <a href="https://www.youtube.com/@Estatement_Group" aria-label="YouTube"><Youtube /></a>
+            <div className="footer-wordmark-block">
+              <div className="footer-wordmark-shell">
+                <span className="footer-wordmark">ESTATEMENT</span>
+              </div>
+              <p className="footer-wordmark-tagline">WHERE PROPERTY BECOMES A STATEMENT.</p>
+              <div className="footer-brand">
+                <p className="footer-about">
+                  We help investors and homeowners make confident, informed
+                  property decisions through data-driven advisory and curated
+                  real estate opportunities.
+                </p>
+                <div className="footer-social">
+                  <a href="https://www.linkedin.com/company/estatement-realty/" aria-label="LinkedIn"><Linkedin /></a>
+                  <a href="https://www.instagram.com/estatementofficial/" aria-label="Instagram"><Instagram /></a>
+                  <a href="https://www.facebook.com/estatementgroup" aria-label="Facebook"><Facebook /></a>
+                  <a href="https://www.youtube.com/@Estatement_Group" aria-label="YouTube"><Youtube /></a>
+                </div>
               </div>
             </div>
 
