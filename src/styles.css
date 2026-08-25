@@ -884,16 +884,16 @@
   }
 
   .brand-wordmark-link {
-    width: 116px;
-    min-width: 116px;
-    height: 35px;
+    width: 126px;
+    min-width: 126px;
+    height: 38px;
     padding: 0;
     border-width: 1px;
     top: 10px;
   }
 
   .brand-image {
-    width: 181px;
+    width: 200px;
     transform: translateY(8px);
   }
 
