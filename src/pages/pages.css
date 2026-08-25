@@ -238,11 +238,20 @@
 
 .featured-slider-shell {
   position: relative;
-  padding: 0 42px;
+  padding: 0;
+}
+
+.featured-properties-section {
+  max-width: none;
+}
+
+.featured-properties-section > .container {
+  width: min(100% - 32px, 1500px);
 }
 
 .featured-slider-grid {
-  gap: 28px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
   align-items: stretch;
 }
 
@@ -959,7 +968,7 @@
   }
 
   .featured-slider-shell {
-    padding-inline: 34px;
+    padding-inline: 0;
   }
 }
 

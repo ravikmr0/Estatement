@@ -82,7 +82,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" style={{ background: "var(--brand-ivory)" }}>
+      <section className="section featured-properties-section" style={{ background: "var(--brand-ivory)" }}>
         <div className="container">
           <div className="section-heading">
             <span className="section-eyebrow">Featured Listings</span>

@@ -68,7 +68,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container header-inner">
           <div className="brand-logo-section">
             <Link to="/" className="brand-wordmark-link" aria-label="Estatement home">
-              <span className="brand-wordmark">ESTATEMENT</span>
+              <img className="brand-image" src="/estatement_logo.png" alt="Estatement" />
             </Link>
             <span className="brand-tagline">WHERE PROPERTY BECOMES A STATEMENT.</span>
           </div>
@@ -141,7 +141,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="footer-top">
             <div className="footer-wordmark-block">
               <div className="footer-wordmark-shell">
-                <span className="footer-wordmark">ESTATEMENT</span>
+                <img className="brand-image" src="/estatement_logo.png" alt="Estatement" />
               </div>
               <p className="footer-wordmark-tagline">WHERE PROPERTY BECOMES A STATEMENT.</p>
               <div className="footer-brand">

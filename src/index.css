@@ -7,9 +7,9 @@
 }
 
 :root {
-  --brand-green: #034b40;
-  --brand-green-700: #02564a;
-  --brand-green-600: #0a6a59;
+  --brand-green: #003c32;
+  --brand-green-700: #00352c;
+  --brand-green-600: #075c4e;
   --brand-green-50: #eef6f3;
   --brand-gold: #d9ad55;
   --brand-gold-600: #c89a42;
@@ -18,11 +18,11 @@
   --text-primary: #1a2b27;
   --text-secondary: #5a6a64;
   --text-muted: #8a988f;
-  --border: rgba(3, 75, 64, 0.12);
-  --border-strong: rgba(3, 75, 64, 0.2);
-  --shadow-sm: 0 1px 3px rgba(3, 75, 64, 0.06);
-  --shadow-md: 0 4px 24px rgba(3, 75, 64, 0.08);
-  --shadow-lg: 0 12px 48px rgba(3, 75, 64, 0.12);
+  --border: rgba(0, 60, 50, 0.12);
+  --border-strong: rgba(0, 60, 50, 0.2);
+  --shadow-sm: 0 1px 3px rgba(0, 60, 50, 0.06);
+  --shadow-md: 0 4px 24px rgba(0, 60, 50, 0.08);
+  --shadow-lg: 0 12px 48px rgba(0, 60, 50, 0.12);
   --radius-sm: 10px;
   --radius: 16px;
   --radius-lg: 24px;
@@ -86,7 +86,7 @@ h1, h2, h3, h4 {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--brand-ivory);
+  background: var(--brand-green);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--brand-green);
