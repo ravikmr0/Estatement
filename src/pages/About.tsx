@@ -73,8 +73,7 @@ export default function About() {
               <span className="section-eyebrow">Our Story</span>
               <h2>From a single office to a trusted advisory</h2>
               <p>
-                Founded in 2025 by visionary brothers Ajay Bhadana and Amit
-                Bhadana, Estatement Realty is built on a decade of
+                Founded in 2025 by visionary <strong><em>Mr. Amit Bhadana</em></strong> and <strong><em>Mr. Ajay Bhadana</em></strong>, brothers, Estatement Realty is built on a decade of
                 entrepreneurial experience across real estate, international
                 business, and the food &amp; beverage industry. Property
                 decisions deserve the same care and discipline as any major
