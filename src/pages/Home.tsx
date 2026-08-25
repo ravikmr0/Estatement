@@ -118,10 +118,10 @@ export default function Home() {
                       {p.location}
                     </div>
                     <div className="property-specs">
-                      {p.beds > 0 && (
+                      {(p.beds ?? 0) > 0 && (
                         <span className="property-spec"><BedDouble /> {p.beds} Beds</span>
                       )}
-                      {p.baths > 0 && (
+                      {(p.baths ?? 0) > 0 && (
                         <span className="property-spec"><Bath /> {p.baths} Baths</span>
                       )}
                       <span className="property-spec"><Maximize /> {p.area}</span>

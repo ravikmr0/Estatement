@@ -7,6 +7,8 @@ export type Project = {
   category: 'Residential' | 'Commercial' | 'Plots'
   type: string
   config: string
+  beds?: number
+  baths?: number
   area: string
   price: string
   status: string
