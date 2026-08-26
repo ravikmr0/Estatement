@@ -11,7 +11,7 @@
   position: relative;
   height: calc(100vh - 68px);
   height: calc(100dvh - 68px);
-  margin-top: 68px;
+  margin-top: 0;
   display: flex;
   align-items: center;
   padding: 0;
@@ -995,9 +995,9 @@
   }
 
   .home-hero {
-    height: calc(100vh - 68px);
-    height: calc(100dvh - 68px);
-    margin-top: 68px;
+    height: calc(100vh - 64px);
+    height: calc(100dvh - 64px);
+    margin-top: 0;
   }
 
   .hero-stat-num {

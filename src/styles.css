@@ -23,12 +23,12 @@
   background: #00241f;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(217, 173, 85, 0.2);
+  border-bottom: none;
   transition: border-color 0.3s var(--ease), background-color 0.3s var(--ease);
 }
 
 .header.scrolled {
-  border-bottom-color: rgba(217, 173, 85, 0.3);
+  border-bottom: none;
 }
 
 .header-inner {
@@ -205,7 +205,7 @@
 .footer-company-name {
   max-width: 100%;
   margin: 2px 0 0;
-  color: var(--brand-gold);
+  color: rgba(255, 255, 255, 0.96);
   font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 600;
