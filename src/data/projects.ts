@@ -61,7 +61,7 @@ export const projects: Project[] = [
     img: '/property/ace_arte.png',
     tag: 'Luxury Residence',
     title: 'ACE ARTE',
-    location: 'Greater Noida West',
+    location: 'Noida sector 150',
     category: 'Residential',
     type: 'Premium Residence',
     config: '3 & 4 BHK',
