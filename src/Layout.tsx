@@ -144,7 +144,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <div className="footer-wordmark-shell">
                 <img className="brand-image" src="/estatement_logo.png" alt="Estatement" />
               </div>
-              <p className="footer-company-name">Estatement Reality Private Limited</p>
+              <p className="footer-company-name">Estatement Realty Private Limited</p>
               <p className="footer-wordmark-tagline">WHERE PROPERTY BECOMES A STATEMENT.</p>
               <div className="footer-brand">
                 <p className="footer-about">
