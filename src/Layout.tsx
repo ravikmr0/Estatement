@@ -140,7 +140,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container">
           <div className="footer-top">
             <div className="footer-wordmark-block">
-              <h4 className="footer-col-title footer-profile-title">Profile</h4>
               <div className="footer-wordmark-shell">
                 <img className="brand-image" src="/estatement_logo.png" alt="Estatement" />
               </div>

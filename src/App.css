@@ -1527,12 +1527,13 @@ button, input, select, textarea {
 
 .footer-company-name {
   margin: 0;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.3rem;
-  letter-spacing: 0.12em;
+  font-family: "Inter", "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: clamp(0.96rem, 1.35vw, 1.32rem);
+  letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.96);
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.45;
+  text-align: center;
 }
 
 .footer-copy {
