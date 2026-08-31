@@ -37,7 +37,7 @@ const teamMembers = [
   {
     name: "Ajay Bhadana",
     role: "Founder & CEO",
-    image: "/about/ajay.jpg",
+    image: "/about/ajay.png",
   },
   
 ];
