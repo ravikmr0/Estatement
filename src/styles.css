@@ -37,8 +37,9 @@
   justify-content: space-between;
   gap: 16px;
   min-height: 72px;
-  padding: 10px 24px;
+  padding: 10px 24px 10px 0;
   flex-wrap: nowrap;
+  margin-left: -24px;
 }
 
 .brand-wordmark-link {
@@ -75,6 +76,7 @@
   gap: 3px;
   align-self: stretch;
   margin-top: -10px;
+  margin-left: -48px;
 }
 
 .brand-tagline {
