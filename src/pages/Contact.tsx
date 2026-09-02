@@ -6,6 +6,8 @@ import {
   Clock,
   CheckCircle2,
   Send,
+  AlertCircle,
+  Loader,
 } from "lucide-react";
 import "./pages.css";
 
@@ -37,12 +39,11 @@ const details = [
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const data = new FormData(form);
+  const validateForm = (data: FormData): boolean => {
     const name = (data.get("name") as string)?.trim();
     const email = (data.get("email") as string)?.trim();
     const message = (data.get("message") as string)?.trim();
@@ -54,10 +55,68 @@ export default function Contact() {
     if (!message) errs.message = "Please tell us how we can help.";
 
     setErrors(errs);
-    if (Object.keys(errs).length > 0) return;
+    return Object.keys(errs).length === 0;
+  };
 
-    setSent(true);
-    form.reset();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    // Client-side validation
+    if (!validateForm(data)) {
+      return;
+    }
+
+    // Clear previous errors
+    setSubmitError(null);
+    setLoading(true);
+
+    try {
+      // Prepare the request payload
+      const payload = {
+        name: (data.get("name") as string)?.trim(),
+        email: (data.get("email") as string)?.trim(),
+        phone: (data.get("phone") as string)?.trim() || undefined,
+        interest: (data.get("interest") as string) || undefined,
+        message: (data.get("message") as string)?.trim(),
+      };
+
+      // Send to the API endpoint
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        const errorMessage =
+          errorData.error || "Failed to submit your inquiry. Please try again.";
+        setSubmitError(errorMessage);
+        setLoading(false);
+        return;
+      }
+
+      // Success!
+      setSent(true);
+      setSubmitError(null);
+      form.reset();
+      setLoading(false);
+
+      // Reset the success message after 10 seconds
+      setTimeout(() => {
+        setSent(false);
+      }, 10000);
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitError(
+        "Unable to reach our server. Please check your connection and try again."
+      );
+      setLoading(false);
+    }
   };
 
   return (
@@ -111,7 +170,20 @@ export default function Contact() {
               {sent && (
                 <div className="form-success">
                   <CheckCircle2 />
-                  Thank you! Your message has been sent. We'll be in touch within one business day.
+                  <div>
+                    <strong>Thank you! Your query has been successfully submitted.</strong>
+                    <p>Our team will contact you shortly. A confirmation email has been sent to your email address.</p>
+                  </div>
+                </div>
+              )}
+
+              {submitError && (
+                <div className="form-error-message">
+                  <AlertCircle />
+                  <div>
+                    <strong>Error</strong>
+                    <p>{submitError}</p>
+                  </div>
                 </div>
               )}
 
@@ -124,6 +196,7 @@ export default function Contact() {
                       name="name"
                       type="text"
                       placeholder="Jane Smith"
+                      disabled={loading}
                     />
                     {errors.name && <div className="form-error">{errors.name}</div>}
                   </div>
@@ -134,6 +207,7 @@ export default function Contact() {
                       name="email"
                       type="email"
                       placeholder="jane@example.com"
+                      disabled={loading}
                     />
                     {errors.email && <div className="form-error">{errors.email}</div>}
                   </div>
@@ -147,11 +221,12 @@ export default function Contact() {
                       name="phone"
                       type="tel"
                       placeholder="+91 98765 43210"
+                      disabled={loading}
                     />
                   </div>
                   <div className="form-group">
                     <label htmlFor="interest">I'm interested in</label>
-                    <select id="interest" name="interest" defaultValue="">
+                    <select id="interest" name="interest" defaultValue="" disabled={loading}>
                       <option value="" disabled>Select a requirement</option>
                       <option value="buying">Buying a property</option>
                       <option value="selling">Selling a property</option>
@@ -169,13 +244,28 @@ export default function Contact() {
                     id="message"
                     name="message"
                     placeholder="Tell us about your property goals, timeline, or any questions you have..."
+                    disabled={loading}
                   />
                   {errors.message && <div className="form-error">{errors.message}</div>}
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-lg" style={{ width: "100%" }}>
-                  Send Message
-                  <Send />
+                <button 
+                  type="submit" 
+                  className="btn btn-primary btn-lg" 
+                  style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "center", gap: "8px" }}
+                  disabled={loading}
+                >
+                  {loading ? (
+                    <>
+                      <Loader size={18} className="spinner" />
+                      Submitting...
+                    </>
+                  ) : (
+                    <>
+                      Send Message
+                      <Send size={18} />
+                    </>
+                  )}
                 </button>
               </form>
             </div>
