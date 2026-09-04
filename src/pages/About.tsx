@@ -75,7 +75,7 @@ export default function About() {
               <p>
                 Founded in 2025 by visionary brothers <strong>Mr. Amit Bhadana</strong> and <strong>Mr. Ajay Bhadana</strong>, Estatement Realty is built on a decade of
                 entrepreneurial experience across real estate, international
-                business, and the food &amp; beverage industry. Property
+                business, and the f&b industry. Property
                 decisions deserve the same care and discipline as any major
                 investment. In a market shaped by new infrastructure, changing
                 micro-markets, and complex paperwork, buyers need more than
