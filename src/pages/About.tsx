@@ -32,7 +32,7 @@ const teamMembers = [
   {
     name: "Amit Bhadana",
     role: "Founder & CEO",
-    image: "/about/amit.jpg",
+    image: "/about/amit.png",
   },
   {
     name: "Ajay Bhadana",

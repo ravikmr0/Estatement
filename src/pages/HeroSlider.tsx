@@ -13,7 +13,7 @@ type Slide = {
 
 const slides: Slide[] = [
   {
-    img: "/hero/balcony_view.jpg",
+    img: "/hero/top_building.jpg",
     eyebrow: "Residential Living",
     title: "Premium homes in",
     accent: "Noida's prime sectors",
@@ -27,7 +27,7 @@ const slides: Slide[] = [
     text: "Fast-appreciating corridor connecting Noida to Agra. Invest in residential and commercial projects along one of North India's most strategic growth belts.",
   },
   {
-    img: "/hero/top_building.jpg",
+    img: "/hero/balcony_view.jpg",
     eyebrow: "Commercial Spaces",
     title: "Commercial real estate",
     accent: "that drives returns",
