@@ -13,7 +13,7 @@ type Slide = {
 
 const slides: Slide[] = [
   {
-    img: "/hero/top_building.jpg",
+    img: "/hero/pool_view.jpg",
     eyebrow: "Residential Living",
     title: "Premium homes in",
     accent: "Noida's prime sectors",
@@ -27,14 +27,14 @@ const slides: Slide[] = [
     text: "Fast-appreciating corridor connecting Noida to Agra. Invest in residential and commercial projects along one of North India's most strategic growth belts.",
   },
   {
-    img: "/hero/balcony_view.jpg",
+    img: "/hero/commercial.png",
     eyebrow: "Commercial Spaces",
     title: "Commercial real estate",
     accent: "that drives returns",
     text: "Grade-A office spaces, retail shops, and business parks across Noida and Greater Noida — built for rental yield and long-term capital appreciation.",
   },
   {
-    img: "/hero/pool_view.jpg",
+    img: "/hero/balcony_view.jpg",
     eyebrow: "Township Living",
     title: "Residential plots &",
     accent: "ready-to-move homes",
@@ -49,7 +49,7 @@ const slides: Slide[] = [
   },
 ];
 
-const SLIDE_DURATION = 6000;
+const SLIDE_DURATION = 3000;
 
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);

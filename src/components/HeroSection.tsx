@@ -26,7 +26,7 @@ export const HeroSection = ({ slides, eyebrow, title, description, image, showSl
 
     const slideTimer = window.setInterval(() => {
       setHeroSlideIndex((index) => (index + 1) % slides.length)
-    }, 6000)
+    }, 3000)
 
     return () => window.clearInterval(slideTimer)
   }, [showSlider, slides])
