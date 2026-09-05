@@ -491,6 +491,55 @@
   max-width: 580px;
 }
 
+.mission-hero {
+  min-height: min(620px, calc(100vh - 76px));
+  display: flex;
+  align-items: flex-end;
+  padding: 120px 0 88px;
+}
+
+.mission-hero::before {
+  background: linear-gradient(90deg, rgba(0, 44, 36, 0.88) 0%, rgba(0, 57, 48, 0.56) 44%, rgba(0, 57, 48, 0.18) 100%), linear-gradient(180deg, rgba(0, 30, 25, 0.08) 35%, rgba(0, 30, 25, 0.7) 100%);
+}
+
+.mission-hero .page-hero-image {
+  object-position: center center;
+}
+
+.mission-hero .page-hero-content {
+  max-width: 680px;
+}
+
+@media (max-width: 640px) {
+  .mission-hero {
+    min-height: calc(100svh - 64px);
+    height: auto;
+    max-height: 700px;
+    padding: 104px 0 58px;
+    background-color: var(--brand-green);
+  }
+
+  .mission-hero .page-hero-image {
+    object-fit: contain;
+    object-position: center center;
+    transform: none;
+  }
+
+  .mission-hero .page-hero-content {
+    width: calc(100% - 40px);
+  }
+
+  .mission-hero .page-hero-title {
+    font-size: clamp(2rem, 9vw, 2.55rem);
+    line-height: 1.08;
+  }
+
+  .mission-hero .page-hero-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+}
+
 /* ============ Section Heading ============ */
 .section-heading {
   text-align: center;

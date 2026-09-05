@@ -3,7 +3,7 @@ import { ArrowRight, Target, Eye, BarChart3, ShieldCheck, Leaf, Globe } from "lu
 import "./pages.css";
 
 const heroImg =
-  "https://images.pexels.com/photos/30580640/pexels-photo-30580640.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600";
+  "/hero/mission_hero.png";
 
 const pillars = [
   {
@@ -35,7 +35,7 @@ const pillars = [
 export default function Mission() {
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero mission-hero">
         <img className="page-hero-image" src={heroImg} alt="" />
         <div className="container page-hero-content">
           <span className="page-hero-eyebrow fade-up">
