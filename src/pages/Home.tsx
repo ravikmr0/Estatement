@@ -16,6 +16,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import HeroSlider from "./HeroSlider";
+import ClientReviews from "../components/ClientReviews";
 import "./pages.css";
 import { projects } from "../data/projects";
 
@@ -197,6 +198,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ClientReviews />
 
       <section className="cta-band">
         <div className="container">

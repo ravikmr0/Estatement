@@ -507,16 +507,26 @@
 }
 
 .mission-hero .page-hero-content {
-  max-width: 680px;
-  transform: translateY(44px);
+  max-width: 1400px;
+  width: min(1400px, calc(100% - 48px));
+  margin-left: 8%;
+  margin-right: 0;
+  transform: translateY(70px);
 }
 
 .mission-hero .page-hero-subtitle {
-  max-width: 680px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
-  overflow: hidden;
+  max-width: 1400px;
+  display: grid;
+  gap: 4px;
+}
+
+.mission-hero .page-hero-subtitle p {
+  margin: 0;
+}
+
+.mission-hero .page-hero-subtitle strong {
+  color: var(--surface);
+  font-weight: 600;
 }
 
 @media (max-width: 640px) {
@@ -536,6 +546,9 @@
 
   .mission-hero .page-hero-content {
     width: calc(100% - 40px);
+    max-width: none;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .mission-hero .page-hero-title {
@@ -544,9 +557,9 @@
   }
 
   .mission-hero .page-hero-subtitle {
+    max-width: none;
     font-size: 0.95rem;
     line-height: 1.55;
-    -webkit-line-clamp: 4;
   }
 }
 
