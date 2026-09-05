@@ -38,16 +38,18 @@ export default function Mission() {
       <section className="page-hero mission-hero">
         <img className="page-hero-image" src={heroImg} alt="" />
         <div className="container page-hero-content">
-          <span className="page-hero-eyebrow fade-up">
-            <span className="dot" />
-            Our Purpose
-          </span>
           <h1 className="page-hero-title fade-up fade-up-delay-1">
             Mission & Vision
           </h1>
           <p className="page-hero-subtitle fade-up fade-up-delay-2">
-            The principles that guide how we evaluate opportunities, advise
-            clients, and build long-term relationships in the NCR market.
+            Building trust in NCR real estate today, while shaping our
+            presence across the global property market. From Noida and
+            Delhi-NCR to Dubai, the UK, and Australia, we're expanding our
+            expertise across high-potential international markets. We combine
+            local market intelligence, strategic advisory, and a long-term
+            investment mindset to help clients make smarter property
+            decisions. Our vision is simple: connect people with the right
+            real estate opportunities — locally and globally.
           </p>
         </div>
       </section>

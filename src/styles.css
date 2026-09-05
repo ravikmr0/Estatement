@@ -508,6 +508,15 @@
 
 .mission-hero .page-hero-content {
   max-width: 680px;
+  transform: translateY(44px);
+}
+
+.mission-hero .page-hero-subtitle {
+  max-width: 680px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
 }
 
 @media (max-width: 640px) {
@@ -537,6 +546,7 @@
   .mission-hero .page-hero-subtitle {
     font-size: 0.95rem;
     line-height: 1.55;
+    -webkit-line-clamp: 4;
   }
 }
 
