@@ -31,12 +31,12 @@ const values = [
 const teamMembers = [
   {
     name: "Amit Bhadana",
-    role: "Founder & Managing Director",
+    role: "Founder & CEO",
     image: "/about/amit.png",
   },
   {
     name: "Ajay Bhadana",
-    role: "Founder & CEO",
+    role: "Founder & Managing Director",
     image: "/about/ajay.png",
   },
   
