@@ -487,7 +487,7 @@
 .page-hero-subtitle {
   font-size: 0.98rem;
   color: rgba(255, 255, 255, 0.82);
-  line-height: 1.6;
+  line-height: 1.38;
   max-width: 580px;
 }
 
@@ -503,7 +503,7 @@
 }
 
 .mission-hero .page-hero-image {
-  object-position: center center;
+  object-position: 70% 10%;
 }
 
 .mission-hero .page-hero-content {
@@ -517,11 +517,12 @@
 .mission-hero .page-hero-subtitle {
   max-width: 1400px;
   display: grid;
-  gap: 4px;
+  gap: 2px;
 }
 
 .mission-hero .page-hero-subtitle p {
   margin: 0;
+  line-height: 1.28;
 }
 
 .mission-hero .page-hero-subtitle strong {
@@ -539,8 +540,8 @@
   }
 
   .mission-hero .page-hero-image {
-    object-fit: contain;
-    object-position: center center;
+    object-fit: cover;
+    object-position: center 12%;
     transform: none;
   }
 
