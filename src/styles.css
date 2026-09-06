@@ -484,6 +484,11 @@
   margin-bottom: 12px;
 }
 
+.properties-hero .page-hero-title,
+.advisory-hero .page-hero-title {
+  white-space: nowrap;
+}
+
 .page-hero-subtitle {
   font-size: 0.98rem;
   color: rgba(255, 255, 255, 0.82);
@@ -555,6 +560,11 @@
   .mission-hero .page-hero-title {
     font-size: clamp(2rem, 9vw, 2.55rem);
     line-height: 1.08;
+  }
+
+  .properties-hero .page-hero-title,
+  .advisory-hero .page-hero-title {
+    white-space: normal;
   }
 
   .mission-hero .page-hero-subtitle {

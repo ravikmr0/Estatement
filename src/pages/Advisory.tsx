@@ -56,7 +56,7 @@ const services = [
 export default function Advisory() {
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero advisory-hero">
         <img className="page-hero-image" src={heroImg} alt="" />
         <div className="container page-hero-content">
           <span className="page-hero-eyebrow fade-up">

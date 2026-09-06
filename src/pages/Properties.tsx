@@ -21,7 +21,7 @@ export default function Properties() {
 
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero properties-hero">
         <img className="page-hero-image" src={heroImg} alt="" />
         <div className="container page-hero-content">
           <span className="page-hero-eyebrow fade-up">
