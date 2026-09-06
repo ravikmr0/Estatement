@@ -540,13 +540,14 @@
     min-height: calc(100svh - 64px);
     height: auto;
     max-height: 700px;
-    padding: 104px 0 58px;
+    padding: 104px 0 16px;
+    align-items: flex-end;
     background-color: var(--brand-green);
   }
 
   .mission-hero .page-hero-image {
     object-fit: cover;
-    object-position: center 12%;
+    object-position: 100% 12%;
     transform: none;
   }
 
@@ -555,6 +556,7 @@
     max-width: none;
     margin-left: 20px;
     margin-right: 20px;
+    transform: none;
   }
 
   .mission-hero .page-hero-title {

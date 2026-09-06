@@ -59,7 +59,7 @@ export default function Mission() {
             <p>
               <strong>
                 Our vision is simple: connect people with the right real estate
-                opportunities locally and globally.
+                opportunities.
               </strong>
             </p>
           </div>

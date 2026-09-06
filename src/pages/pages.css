@@ -261,6 +261,15 @@
   width: min(100% - 32px, 1500px);
 }
 
+.home-properties-cta {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.home-approach-section {
+  padding-top: 24px;
+}
+
 .featured-slider-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;

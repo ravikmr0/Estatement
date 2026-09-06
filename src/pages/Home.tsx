@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import HeroSlider from "./HeroSlider";
 import ClientReviews from "../components/ClientReviews";
+import HomeStats from "../components/HomeStats";
 import "./pages.css";
 import { projects } from "../data/projects";
 
@@ -164,7 +165,7 @@ export default function Home() {
               </button>
             )}
           </div>
-          <div style={{ textAlign: "center", marginTop: 48 }}>
+          <div className="home-properties-cta">
             <Link to="/properties" className="btn btn-primary btn-lg">
               View All Properties
               <ArrowRight />
@@ -173,7 +174,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section home-approach-section">
         <div className="container">
           <div className="section-heading">
             <span className="section-eyebrow">Our Approach</span>
@@ -198,6 +199,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <HomeStats />
 
       <ClientReviews />
 
