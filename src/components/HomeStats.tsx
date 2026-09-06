@@ -2,7 +2,7 @@ import "./HomeStats.css";
 
 const stats = [
   { number: "1500+", label: "Properties Sold" },
-  { number: "500+", label: "Happy Clients" },
+  { number: "900+", label: "Happy Clients" },
   { number: "100%", label: "Successful Projects" },
 ];
 
