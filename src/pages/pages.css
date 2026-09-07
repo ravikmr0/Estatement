@@ -655,12 +655,19 @@
 .filter-bar {
   display: flex;
   gap: 12px;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   margin-bottom: 32px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.filter-bar::-webkit-scrollbar {
+  display: none;
 }
 
 .filter-chip {
+  flex: 0 0 auto;
   padding: 8px 18px;
   border-radius: 999px;
   border: 1px solid var(--border-strong);
