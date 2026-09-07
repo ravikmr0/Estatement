@@ -16,7 +16,7 @@ const reviews: ClientReview[] = [
     role: "Home buyer, Noida",
     rating: 5,
     review: "The team understood what we needed and helped us compare options without any pressure. The entire process felt clear and well managed.",
-    image: "https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://i.pinimg.com/736x/da/31/38/da313829618ce49ebec8517389ff6016.jpg",
   },
   {
     name: "Ananya Kapoor",
@@ -30,14 +30,14 @@ const reviews: ClientReview[] = [
     role: "Business owner, Noida Expressway",
     rating: 5,
     review: "Estatement helped us find a commercial space that matched our budget and growth plans. The shortlist was thoughtful and relevant.",
-    image: "https://plus.unsplash.com/premium_photo-1689629870780-5d0e655383e6?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://imilap.com/profileimages/profile_1540618346119.jpg",
   },
   {
     name: "Priya Sharma",
     role: "Property buyer, YEIDA",
     rating: 5,
     review: "We appreciated the honest guidance throughout our plot search. Every question was answered patiently, and the next step was always clear.",
-    image: "https://plus.unsplash.com/premium_photo-1661699523943-8d00165bd809?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlE-QtbS0t4kG5Gs4Ua3yXQkeDbnK-ZuP-p2Gtk7OMoqEJKgXNCT08qiSv&s=10",
   },
   {
     name: "Arjun Malhotra",
@@ -58,28 +58,28 @@ const reviews: ClientReview[] = [
     role: "Entrepreneur, Noida",
     rating: 5,
     review: "Their due diligence mindset really stood out. They looked beyond the brochure and helped us make a more informed investment.",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=240&q=85",
+    image: "https://www.imilap.com/profileimages/profile_IMG_1513(1).jpg",
   },
   {
     name: "Kavita Arora",
     role: "Home buyer, Greater Noida",
     rating: 4.5,
     review: "From site visits to final conversations, everything was coordinated smoothly. The advice felt personal rather than generic.",
-    image: "https://www.shutterstock.com/image-photo/portrait-indian-businesswoman-dressed-formalwear-260nw-2352783045.jpg",
+    image: "https://img.magnific.com/free-photo/medium-shot-woman-talking-phone_23-2149461760.jpg?semt=ais_hybrid&w=740&q=80",
   },
   {
     name: "Manish Khanna",
     role: "Investor, YEIDA corridor",
     rating: 5,
     review: "A dependable advisory team with a strong understanding of the region. They helped me see both the opportunity and the risks clearly.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=240&q=85",
+    image: "https://us.123rf.com/450wm/rawpixel/rawpixel1802/rawpixel180201527/95112951-indian-man-portrait-at-the-temple.jpg?ver=6",
   },
   {
     name: "Ishita Verma",
     role: "Home buyer, Noida Expressway",
     rating: 5,
     review: "The process was transparent from start to finish. I would happily recommend Estatement to anyone looking for a more considered property search.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa_3BU6yC57-2N4Rmv5hSPlw2n2mW54KeHRkq4aV7OhA&s=10",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwD5oJKd9_sy0X8O1KyX26odq0siV5Id0MQuvaXPBu9w&s=10",
   },
 ];
 

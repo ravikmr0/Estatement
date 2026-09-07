@@ -58,8 +58,7 @@ export default function Mission() {
             </p>
             <p>
               <strong>
-                Our vision is simple: connect people with the right real estate
-                opportunities.
+                Our vision is simple: connect people with the right real estate Investment opportunities.
               </strong>
             </p>
           </div>
