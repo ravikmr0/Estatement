@@ -21,9 +21,9 @@ const reviews: ClientReview[] = [
   {
     name: "Ananya Kapoor",
     role: "Investor, Greater Noida",
-    rating: 4.5,
+    rating: 5,
     review: "Their market insights gave me the confidence to invest in the right corridor. Practical advice, quick responses, and no unnecessary noise.",
-    image: "https://plus.unsplash.com/premium_photo-1664910500054-608d23c060f8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://media.istockphoto.com/id/1417839632/photo/beautiful-woman-leaning-on-railing-of-balcony.jpg?s=612x612&w=0&k=20&c=O2A7iAMpoZQTeOOM7q5BOiiKzelA1iNM384ChmcUNIU=",
   },
   {
     name: "Vikram Sethi",
@@ -42,7 +42,7 @@ const reviews: ClientReview[] = [
   {
     name: "Arjun Malhotra",
     role: "Investor, Noida",
-    rating: 4.5,
+    rating: 5,
     review: "A very professional experience from the first call. They brought useful local context that made the decision much easier.",
     image: "https://images.unsplash.com/photo-1713947507130-227586ab3024?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -63,7 +63,7 @@ const reviews: ClientReview[] = [
   {
     name: "Kavita Arora",
     role: "Home buyer, Greater Noida",
-    rating: 4.5,
+    rating: 5,
     review: "From site visits to final conversations, everything was coordinated smoothly. The advice felt personal rather than generic.",
     image: "https://img.magnific.com/free-photo/medium-shot-woman-talking-phone_23-2149461760.jpg?semt=ais_hybrid&w=740&q=80",
   },
