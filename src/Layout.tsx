@@ -134,7 +134,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </>
       )}
 
-      <main>{children}</main>
+      <main className={location.pathname === "/about" ? "about-page" : ""}>{children}</main>
 
       <footer className="footer">
         <div className="container">

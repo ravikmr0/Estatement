@@ -97,7 +97,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section" style={{ background: "var(--brand-ivory)" }}>
+      <section className="section" style={{ background: "#FFFFFF" }}>
         <div className="container">
           <div className="section-heading">
             <span className="section-eyebrow">What We Stand For</span>
