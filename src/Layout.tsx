@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import {
   Home,
@@ -30,6 +30,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -42,6 +43,24 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     setMenuOpen(false);
     window.scrollTo(0, 0);
   }, [location.pathname]);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [menuOpen]);
 
   useEffect(() => {
     const revealElements = document.querySelectorAll<HTMLElement>('.reveal');
@@ -97,6 +116,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             className="mobile-toggle"
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
           >
             <Menu />
           </button>
@@ -110,26 +131,58 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             style={{ display: "block" }}
             onClick={() => setMenuOpen(false)}
           />
-          <div className="mobile-menu-panel open">
+          <div id="mobile-menu" className="mobile-menu-panel open" role="dialog" aria-modal="true" aria-label="Main navigation">
             <button
+              ref={closeButtonRef}
               className="mobile-menu-close"
               onClick={() => setMenuOpen(false)}
               aria-label="Close menu"
             >
               <X />
             </button>
-            {navItems.map((item) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                end={item.to === "/"}
-                className={({ isActive }) =>
-                  isActive ? "active" : ""
-                }
-              >
-                {item.label}
-              </NavLink>
-            ))}
+            <div className="editorial-menu-content">
+              <nav className="editorial-menu-nav" aria-label="Primary navigation">
+                {navItems.map((item, index) => (
+                  <NavLink
+                    key={item.to}
+                    to={item.to}
+                    end={item.to === "/"}
+                    className={({ isActive }) =>
+                      `editorial-menu-link ${isActive ? "active" : ""}`
+                    }
+                  >
+                    <span className="editorial-menu-number">{String(index + 1).padStart(2, "0")}</span>
+                    <span className="editorial-menu-divider" aria-hidden="true" />
+                    <span className="editorial-menu-label">{item.label}</span>
+                  </NavLink>
+                ))}
+              </nav>
+
+              <div className="editorial-menu-lower">
+                <p className="editorial-menu-intro">
+                  CURATED REAL ESTATE.<br />
+                  CONSIDERED INVESTMENTS.
+                </p>
+                <Link className="editorial-menu-cta" to="/contact" onClick={() => setMenuOpen(false)}>
+                  PRIVATE CONSULTATION <span aria-hidden="true">→</span>
+                </Link>
+                <p className="editorial-menu-locations">NOIDA <span aria-hidden="true">·</span> DELHI NCR <span aria-hidden="true">·</span> YEIDA</p>
+              </div>
+
+              <div className="editorial-menu-footer">
+                <div className="editorial-menu-socials" aria-label="Social media links">
+                  <a href="https://www.linkedin.com/company/estatement-realty/" aria-label="LinkedIn"><Linkedin /></a>
+                  <a href="https://www.instagram.com/estatementofficial/" aria-label="Instagram"><Instagram /></a>
+                  <a href="https://www.youtube.com/@Estatement_Group" aria-label="YouTube"><Youtube /></a>
+                </div>
+                <div className="editorial-menu-signature" aria-label="More Than Property">
+                  <span>More</span>
+                  <span>Than</span>
+                  <span>Property</span>
+                  <i aria-hidden="true" />
+                </div>
+              </div>
+            </div>
           </div>
         </>
       )}
