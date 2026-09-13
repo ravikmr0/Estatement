@@ -51,6 +51,9 @@ const slides: Slide[] = [
 
 const SLIDE_DURATION = 3000;
 
+const publicAsset = (path: string) =>
+  `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
 
@@ -80,7 +83,7 @@ export default function HeroSlider() {
             className={`home-hero-slide ${i === current ? "active" : ""}`}
             aria-hidden={i !== current}
           >
-            <img src={s.img} alt="" />
+            <img src={publicAsset(s.img)} alt="" />
           </div>
         ))}
       </div>
