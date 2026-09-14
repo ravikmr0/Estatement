@@ -177,6 +177,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <a href="https://www.linkedin.com/company/estatement-realty/" aria-label="LinkedIn"><Linkedin /></a>
                   <a href="https://www.instagram.com/estatementofficial/" aria-label="Instagram"><Instagram /></a>
                   <a href="https://www.youtube.com/@Estatement_Group" aria-label="YouTube"><Youtube /></a>
+                  <a href="https://x.com/Estatementgrp" target="_blank" rel="noopener noreferrer" aria-label="X">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817-5.976 6.817H1.67l7.73-8.835L1.244 2.25h6.826l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                  </a>
                 </div>
                 <div className="editorial-menu-signature" aria-label="More Than Property">
                   <span>More</span>

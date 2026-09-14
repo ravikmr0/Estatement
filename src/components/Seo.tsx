@@ -9,6 +9,7 @@ const defaultImage = `${siteUrl}/hero/top_building.jpg`
 type SeoData = {
   title: string
   description: string
+  keywords: string
   image?: string
 }
 
@@ -17,31 +18,43 @@ const pageSeo: Record<string, SeoData> = {
     title: 'Estatement Realty | Premium Property Advisory in Noida',
     description:
       'Discover curated homes, commercial spaces, plots, and investment guidance across Noida, Greater Noida, Noida Expressway, and YEIDA.',
+    keywords:
+      'Noida real estate, real estate consultant in Noida, property advisor Noida, residential property Noida, commercial property Noida, YEIDA plots, Greater Noida property investment',
   },
   '/about': {
     title: 'About Estatement Realty | Noida Real Estate Advisors',
     description:
       'Learn how Estatement Realty helps homeowners, investors, and businesses make clearer property decisions across the Noida region.',
+    keywords:
+      'Noida real estate company, property consultants Noida, real estate advisors Greater Noida, trusted property advisor in Noida, Estatement Realty',
   },
   '/mission': {
     title: 'Mission & Vision | Estatement Realty',
     description:
       'Explore the principles behind Estatement Realty: transparent advice, local market understanding, careful evaluation, and client-first service.',
+    keywords:
+      'real estate advisory Noida, transparent property consultant, property investment guidance Noida, real estate due diligence NCR',
   },
   '/properties': {
     title: 'Properties in Noida, Greater Noida & YEIDA | Estatement Realty',
     description:
       'Explore selected commercial properties and YEIDA authority plots reviewed for location, usability, connectivity, and long-term potential.',
+    keywords:
+      'properties in Noida, flats in Noida, commercial property Noida Expressway, residential property Greater Noida, YEIDA authority plots, property for investment in Noida',
   },
   '/advisory': {
     title: 'Real Estate Investment Advisory in Noida | Estatement Realty',
     description:
       'Get practical real estate investment guidance, property evaluation, due diligence, risk review, and transaction support in Noida and NCR.',
+    keywords:
+      'real estate investment advisory Noida, property investment consultant, real estate portfolio advisory NCR, property due diligence Noida, investment consultant Greater Noida',
   },
   '/contact': {
     title: 'Contact Estatement Realty | Noida Property Consultation',
     description:
       'Speak with Estatement Realty about residential property, commercial opportunities, plots, portfolio reviews, or investment advisory.',
+    keywords:
+      'contact Noida property consultant, Noida real estate consultation, property investment consultation Greater Noida, Estatement Realty contact',
   },
 }
 
@@ -99,11 +112,13 @@ export default function Seo() {
       ? {
           title: `${property.title} | ${property.location} | Estatement Realty`,
           description: `${property.description} Explore ${property.title} with Estatement Realty for availability, pricing, and investment guidance.`,
+          keywords: `${property.title}, ${property.location} property, ${property.category.toLowerCase()} property Noida, real estate investment Noida, Estatement Realty`,
           image: `${siteUrl}${property.img}`,
         }
       : pageSeo[normalizedPath] || {
           title: 'Page Not Found | Estatement Realty',
           description: 'The requested Estatement Realty page could not be found.',
+          keywords: 'Estatement Realty',
         }
     const isKnownPage = Boolean(property || pageSeo[normalizedPath])
     const canonicalUrl = `${siteUrl}${normalizedPath === '/' ? '' : normalizedPath}`
@@ -112,6 +127,7 @@ export default function Seo() {
     document.title = seo.title
     document.documentElement.lang = 'en-IN'
     setMeta('description', seo.description)
+    setMeta('keywords', seo.keywords)
     setMeta('robots', isKnownPage ? 'index, follow' : 'noindex, follow')
     setMeta('author', siteName)
     setMeta('twitter:card', 'summary_large_image')
@@ -143,6 +159,13 @@ export default function Seo() {
         'https://www.youtube.com/@Estatement_Group',
       ],
       areaServed: ['Noida', 'Greater Noida', 'YEIDA', 'Noida Expressway'],
+      knowsAbout: [
+        'Noida real estate',
+        'Greater Noida property investment',
+        'YEIDA authority plots',
+        'commercial property in Noida',
+        'real estate due diligence',
+      ],
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'A-74A, Sector 136',
@@ -181,6 +204,7 @@ export default function Seo() {
           '@type': 'WebPage',
           name: seo.title,
           description: seo.description,
+          keywords: seo.keywords,
           url: canonicalUrl,
           image: imageUrl,
           isPartOf: { '@type': 'WebSite', name: siteName, url: siteUrl },

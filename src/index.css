@@ -39,6 +39,8 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--text-primary);
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
   background: var(--surface);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -49,6 +51,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  overflow-x: clip;
 }
 
 a {

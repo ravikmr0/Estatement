@@ -80,7 +80,8 @@
   gap: 3px;
   align-self: stretch;
   margin-top: -10px;
-  margin-left: -48px;
+  margin-left: 0;
+  order: 1;
 }
 
 .brand-tagline {
@@ -244,6 +245,7 @@
   border: 1px solid var(--border);
   border-radius: 999px;
   background: rgba(247, 244, 238, 0.72);
+  order: 2;
   color: var(--text-muted);
   transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease), background-color 0.2s var(--ease);
 }
@@ -291,6 +293,7 @@
   display: flex;
   align-items: center;
   gap: 28px;
+  order: 3;
 }
 
 .nav-link {
@@ -354,6 +357,7 @@
   justify-content: center;
   color: var(--brand-green);
   background: var(--surface);
+  order: 4;
 }
 
 .mobile-toggle svg {
@@ -815,6 +819,7 @@
   position: fixed;
   inset: 0;
   width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
   background: #003c34;
@@ -829,14 +834,12 @@
   content: "";
   position: absolute;
   z-index: -2;
-  right: -9vw;
-  bottom: -12vh;
-  width: min(62vw, 850px);
-  height: 72vh;
-  background: linear-gradient(90deg, #003c34 0%, rgba(0, 60, 52, 0.62) 35%, rgba(0, 60, 52, 0.08) 100%), url("/hero/top_building.jpg") center / cover;
-  opacity: 0.56;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 42%, #000 78%, transparent 100%);
-  mask-image: linear-gradient(90deg, transparent 0%, #000 42%, #000 78%, transparent 100%);
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 60, 52, 0.9) 0%, rgba(0, 60, 52, 0.58) 45%, rgba(0, 60, 52, 0.78) 100%),
+    linear-gradient(90deg, rgba(0, 60, 52, 0.72) 0%, rgba(0, 60, 52, 0.24) 58%, rgba(0, 60, 52, 0.64) 100%),
+    url("/hero/top_building.jpg") center / cover;
+  opacity: 0.92;
 }
 
 .mobile-menu-panel.open {
@@ -856,10 +859,10 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 160px;
-  min-width: 160px;
-  height: 48px;
-  margin: 0 auto clamp(18px, 3vh, 32px);
+  width: 204px;
+  min-width: 204px;
+  height: 61px;
+  margin: -36px auto clamp(18px, 3vh, 32px) 0;
   padding: 0;
   overflow: hidden;
   border: 1px solid rgba(217, 173, 85, 0.18);
@@ -872,7 +875,7 @@
 
 .editorial-menu-brand img {
   display: block;
-  width: 250px;
+  width: 316px;
   max-width: none;
   height: auto;
   transform: translateY(8px);
@@ -1185,6 +1188,7 @@
     margin-left: auto;
     margin-right: 12px;
     width: min(34vw, 220px);
+    order: 2;
   }
 
   .mobile-toggle {
@@ -1264,7 +1268,8 @@
   .brand-logo-section {
     flex-basis: auto;
     gap: 2px;
-    margin-left: -4px;
+    margin-left: 0;
+    order: 1;
   }
 
   .brand-wordmark-link {
@@ -1274,7 +1279,7 @@
     padding: 0;
     border-width: 1px;
     top: 10px;
-    transform: translateX(-4px);
+    transform: none;
   }
 
   .brand-image {
@@ -1311,6 +1316,7 @@
     padding: 8px 11px;
     min-height: 40px;
     gap: 7px;
+    order: 2;
   }
 
   .header-search svg {
@@ -1330,6 +1336,7 @@
     border-radius: 10px;
     color: #ffffff;
     background: rgba(0, 47, 40, 0.72);
+    order: 3;
   }
 
   .mobile-toggle svg {
@@ -1378,14 +1385,14 @@
   }
 
   .editorial-menu-brand {
-    width: 126px;
-    min-width: 126px;
-    height: 38px;
+    width: 168px;
+    min-width: 168px;
+    height: 50px;
     margin-bottom: 18px;
   }
 
   .editorial-menu-brand img {
-    width: 200px;
+    width: 262px;
     transform: translateY(8px);
   }
 
@@ -1440,10 +1447,7 @@
   }
 
   .mobile-menu-panel::before {
-    right: -30vw;
-    width: 90vw;
-    height: 52vh;
-    opacity: 0.34;
+    opacity: 0.92;
   }
 }
 
