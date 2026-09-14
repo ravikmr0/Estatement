@@ -141,6 +141,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <X />
             </button>
             <div className="editorial-menu-content">
+              <Link to="/" className="editorial-menu-brand" onClick={() => setMenuOpen(false)} aria-label="Estatement home">
+                <img src={`${import.meta.env.BASE_URL}estatement_logo.png`} alt="Estatement" />
+              </Link>
               <nav className="editorial-menu-nav" aria-label="Primary navigation">
                 {navItems.map((item, index) => (
                   <NavLink
