@@ -111,11 +111,13 @@ button, input, select, textarea {
 }
 
 .header-inner {
-  padding: 12px 28px;
+  width: calc(100% - 48px);
+  max-width: 1500px;
+  padding: 12px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 12px;
   min-height: 64px;
 }
 
